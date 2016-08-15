@@ -17,8 +17,14 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 
+* when working on Windows do also `ember windows`<br/>
+If you get a PSSecurityException, you may need to run the following command using PowerShell:<br/>
+`Set-ExecutionPolicy Unrestricted -scope Process`<br/>
+`ember windows`
+
 ## Running / Development
 
+* on Windows it is recommended to use an elevated prompt, which can be achieved by starting PowerShell or CMD as Administrator
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
