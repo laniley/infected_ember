@@ -41,6 +41,8 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
 
+    ENV.fb_app_id = '**************';
+
     ENV['ember-cli-mirage'] = {
       enabled: false
     };
@@ -55,6 +57,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+
+    ENV.fb_app_id = '**************';
+
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
@@ -68,6 +73,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.backend_url = 'https://infected-games.com/infected';
+    ENV.fb_app_id = '**************';
   }
 
   return ENV;

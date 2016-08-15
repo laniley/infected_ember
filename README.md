@@ -22,6 +22,10 @@ If you get a PSSecurityException, you may need to run the following command usin
 `Set-ExecutionPolicy Unrestricted -scope Process`<br/>
 `ember windows`
 
+* rename `config/environment.js.default` into `config/environment.js`
+* open it and insert the correct facebook app-ids for development, test and production instead of <br/>
+`ENV.fb_app_id = '**************';`
+
 ## Running / Development
 
 * on Windows it is recommended to use an elevated prompt, which can be achieved by starting PowerShell or CMD as Administrator
