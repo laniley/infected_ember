@@ -38,6 +38,13 @@ module.exports = function(environment) {
     routeAfterAuthentication: 'intern',
     routeIfAlreadyAuthenticated: 'intern'
   };
+  
+  // for Ember.Date.parse deprecation
+  ENV['EmberENV'] = {
+    EXTEND_PROTOTYPES: {
+      Date: false
+    }
+  };
 
   if (environment === 'development') {
 
