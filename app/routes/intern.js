@@ -4,7 +4,7 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
-  scope: 'id,first_name,last_name,gender,friends,invitable_friends',
+  scope: 'id,first_name,last_name,friends,invitable_friends',
 
   model: function() {
     var me = this.store.peekRecord('me', 1);
