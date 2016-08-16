@@ -22,7 +22,7 @@ body {
 	margin-top: 50px;
 	font-family: logo_font;
 	font-size: 120px;
-	color: $neon-green;
+	color: $highlight-text-color;
 }
 
 .app-logo {
@@ -89,5 +89,23 @@ body {
 
 	.fa {
 	    margin-right: 5px;
+	}
+}
+
+.top-nav-bar {
+	font-family: logo_font;
+	font-size: 24px;
+	color: $highlight-text-color;
+	.top-nav-bar-section {
+		list-style-type: none;
+		li {
+			a {
+				text-decoration: none;
+				color: $link-color;
+				&:hover {
+					color: $link-color-hover;
+				}
+			}
+		}
 	}
 }
