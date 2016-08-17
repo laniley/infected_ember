@@ -37,20 +37,17 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
           if(Ember.isEmpty(users)) {
             user = store.createRecord('user');
-            me.set('user', user);
-            user.set('fb_id', response.id);
-            user.set('first_name', response.first_name);
-            user.set('last_name', response.last_name);
-            user.save();
             this.transitionTo('intern.welcome');
           }
           else {
             user = users.get('firstObject');
-            me.set('user', user);
-            user.set('fb_id', response.id);
-            user.set('first_name', response.first_name);
-            user.set('last_name', response.last_name);
           }
+
+          me.set('user', user);
+          user.set('fb_id', response.id);
+          user.set('first_name', response.first_name);
+          user.set('last_name', response.last_name);
+          user.save();
 
           this.loadFriends(me, response);
 

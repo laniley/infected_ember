@@ -3,7 +3,16 @@ $neon-green: #00f914;
 
 $background-color: $dark-red;
 
+$primary-text-color: white;
 $highlight-text-color: #00f914;
 
 $link-color: darken($highlight-text-color, 10%);
 $link-color-hover: $highlight-text-color;
+
+$button-color: black;
+$button-bg-color: $highlight-text-color;
+$button-bg-color-hover: $highlight-text-color;
+
+.green {
+	color: $neon-green;
+}

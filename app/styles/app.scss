@@ -11,6 +11,8 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: $background-color;
+	color: $primary-text-color;
+	font-family: logo_font;
 }
 
 a {
@@ -19,6 +21,28 @@ a {
 	color: $link-color;
 	&:hover {
 		color: $link-color-hover;
+	}
+}
+
+.normal-text {
+	font-size: 30px;
+}
+
+.large-text {
+	font-size: 48px;
+}
+
+.button {
+    display: inline-block;
+	font-size: 48px;
+	background: linear-gradient(to bottom, $button-bg-color, darken($button-bg-color, 20%));
+	box-shadow: black 0px 0px 50px;
+	color: $button-color;
+	padding: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	&:hover {
+		background: $button-bg-color-hover;
 	}
 }
 
@@ -32,6 +56,11 @@ a {
 	overflow: auto;
 	.ps-scrollbar-y-rail {
 		visibility: hidden;
+	}
+	&.intern {
+		display: flex;
+		justify-content: center;
+		margin-top: 100px;
 	}
 }
 
@@ -102,10 +131,38 @@ a {
 	padding: 0 15px;
 	left: 0;
 	right: 0;
+	.name {
+		h1 {
+			margin: 0;
+		}
+	}
+	.account-dropdown {
+		cursor: pointer;
+		overflow: hidden;
+		transition: height 0.2s ease;
+		height: 60px;
+		&:hover {
+			height: 100px;
+		}
+		.dropdown-title {
+			display: flex;
+			align-items: center;
+			.name {
+				margin-right: 10px;
+			}
+			.img {
+				img {
+					border: 2px solid $highlight-text-color;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
 	.top-nav-bar-section {
 		list-style-type: none;
 		&.--left {
 			float: left;
+		    padding-left: 0;
 		}
 		&.--right {
 			float: right;
@@ -120,5 +177,16 @@ a {
 				}
 			}
 		}
+	}
+}
+
+.welcome {
+	padding: 15px;
+	max-width: 800px;
+	.welcome-title {
+		margin-bottom: 50px;
+	}
+	.welcome-text {
+		margin-bottom: 50px;
 	}
 }

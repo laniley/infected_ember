@@ -8,6 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('intern', function() {
     this.route('welcome');
+    this.route('infection', function() {
+      this.route('create');
+    });
   });
   this.route('login');
 });
