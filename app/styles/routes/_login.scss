@@ -1,0 +1,18 @@
+.app-title {
+	margin-top: 50px;
+	font-family: logo_font;
+	font-size: 120px;
+	color: $highlight-text-color;
+}
+
+.app-logo {
+	display: inline-block;
+	width: 500px;
+	img {
+		width: 100%;
+	}
+}
+
+.fb-login-button-row {
+	margin-bottom: 50px;
+}

@@ -1,35 +1,37 @@
 @import "colors";
 @import "fonts";
 
+@import "routes";
+
 body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	background-color: $background-color;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: $link-color;
+	&:hover {
+		color: $link-color-hover;
+	}
 }
 
 .main-container {
 	position: absolute;
-	height: 100%;
-    min-height: 800px;
-	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	text-align: center;
-	background-color: $dark-red;
-}
-
-.app-title {
-	margin-top: 50px;
-	font-family: logo_font;
-	font-size: 120px;
-	color: $highlight-text-color;
-}
-
-.app-logo {
-	display: inline-block;
-	width: 500px;
-	img {
-		width: 100%;
+	overflow: auto;
+	.ps-scrollbar-y-rail {
+		visibility: hidden;
 	}
 }
 
@@ -96,14 +98,25 @@ body {
 	font-family: logo_font;
 	font-size: 24px;
 	color: $highlight-text-color;
+	position: absolute;
+	padding: 0 15px;
+	left: 0;
+	right: 0;
 	.top-nav-bar-section {
 		list-style-type: none;
+		&.--left {
+			float: left;
+		}
+		&.--right {
+			float: right;
+		}
+
 		li {
 			a {
-				text-decoration: none;
-				color: $link-color;
-				&:hover {
-					color: $link-color-hover;
+				display: flex;
+			    align-items: center;
+				i {
+					margin-right: 7px;
 				}
 			}
 		}
