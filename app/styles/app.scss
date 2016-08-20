@@ -3,6 +3,8 @@
 
 @import "routes";
 
+@import "top-nav-bar";
+
 body {
 	position: absolute;
 	height: 100%;
@@ -123,70 +125,133 @@ a {
 	}
 }
 
-.top-nav-bar {
-	font-family: logo_font;
-	font-size: 24px;
-	color: $highlight-text-color;
-	position: absolute;
-	padding: 0 15px;
-	left: 0;
-	right: 0;
-	.name {
-		h1 {
-			margin: 0;
-		}
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: $link-color;
+	&.active {
+		color: $link-color-active;
 	}
-	.account-dropdown {
-		cursor: pointer;
-		overflow: hidden;
-		transition: height 0.2s ease;
-		height: 60px;
+	&:not(.active) {
 		&:hover {
-			height: 100px;
-		}
-		.dropdown-title {
-			display: flex;
-			align-items: center;
-			.name {
-				margin-right: 10px;
-			}
-			.img {
-				img {
-					border: 2px solid $highlight-text-color;
-					border-radius: 5px;
-				}
-			}
+			color: $link-color-hover;
 		}
 	}
-	.top-nav-bar-section {
-		list-style-type: none;
-		&.--left {
-			float: left;
-		    padding-left: 0;
-		}
-		&.--right {
-			float: right;
-		}
+}
 
-		li {
-			a {
-				display: flex;
-			    align-items: center;
-				i {
-					margin-right: 7px;
-				}
-			}
+input {
+	font-family: main_font;
+	font-size: 24px;
+	border-radius: 5px;
+	margin: 15px 0;
+	padding: 3px 5px;
+	border: none;
+}
+
+input, button {
+	&:focus {
+		outline:none;
+	}
+}
+
+.normal-text {
+	font-size: 30px;
+}
+
+.large-text, .section-title,  {
+	font-size: 48px;
+}
+
+.section-title {
+	margin-bottom: 50px;
+}
+
+button {
+    display: inline-block;
+	font-family: main_font;
+	font-size: 48px;
+	box-shadow: #666 0px -1px 3px, black 0px 0px 50px;
+	padding: 15px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	&.disabled {
+		color: #666;
+		cursor: no-drop;
+	}
+	&:not(.disabled) {
+		background: $button-bg;
+		color: $button-color;
+		&:hover {
+			background: $button-bg-color-hover;
 		}
+	}
+}
+
+.main-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	overflow: auto;
+	.ps-scrollbar-y-rail {
+		visibility: hidden;
+	}
+	&.intern {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 100px;
 	}
 }
 
 .welcome {
 	padding: 15px;
 	max-width: 800px;
-	.welcome-title {
-		margin-bottom: 50px;
-	}
 	.welcome-text {
 		margin-bottom: 50px;
+	}
+}
+
+.create {
+	.name {
+		margin: 45px 0 0 0;
+		input {
+		    text-align: center;
+		}
+		.name-status-icon {
+			display: inline-block;
+		    position: absolute;
+		    line-height: 60px;
+		    margin-left: 15px;
+		    font-size: 30px;
+			&.not_correct {
+				color: $warning-text-color;
+			}
+			&.correct {
+				color: $neon-green;
+			}
+		}
+		.missing_requirements_message {
+		    font-family: Helvetica;
+			height: 24px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.list {
+	font-size: 32px;
+	.list-item {
+		display: flex;
+    	align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 10px 0;
+		img {
+			margin-right: 10px;
+		}
 	}
 }

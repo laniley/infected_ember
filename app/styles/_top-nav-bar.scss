@@ -1,0 +1,79 @@
+.top-nav-bar {
+	font-family: main_font;
+	font-size: 24px;
+	color: $highlight-text-color;
+	position: absolute;
+	padding: 0 15px;
+	left: 0;
+	right: 0;
+	.name {
+		a { color: $highlight-text-color; }
+		h1 {
+			margin: 0;
+		}
+	}
+	.account-dropdown {
+		cursor: pointer;
+		overflow: hidden;
+		transition: height 0.2s ease;
+		height: 55px;
+		&:hover {
+			height: 100px;
+		}
+		.dropdown-title {
+			display: flex;
+			align-items: center;
+			.name {
+				margin-right: 10px;
+			}
+			.img {
+				img {
+					border: 2px solid $highlight-text-color;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+	.top-nav-bar-section {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		min-height: 55px;
+		&.--left {
+			float: left;
+		    padding-left: 0;
+		}
+		&.--center {
+			float: left;
+			margin-left: 50px;
+		}
+		&.--right {
+			float: right;
+		}
+
+		li {
+			margin: 0 10px;
+			a {
+				display: flex;
+			    align-items: center;
+				i {
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		color: $top-nav-link-color;
+		&.active {
+			color: $top-nav-link-color-active;
+		}
+		&:not(.active) {
+			&:hover {
+				color: $top-nav-link-color-hover;
+			}
+		}
+	}
+}

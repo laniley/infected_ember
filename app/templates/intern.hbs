@@ -1,24 +1,4 @@
-<div class="top-nav-bar">
-
-  <ul class="top-nav-bar-section --left">
-    <li class="name">
-      <h1>{{#link-to 'intern'}}* INFECTED{{/link-to}}</h1>
-    </li>
-  </ul>
-
-  <ul class="top-nav-bar-section --right">
-    <li class="account-dropdown" {{action 'logout'}}>
-      <div class="dropdown-title">
-        <span class="name">{{model.user.first_name}}</span>
-        <span class="img"><img src={{model.user.img_url}} /></span>
-      </div>
-    	<div class="logout">
-        <a href="#">{{fa-icon 'sign-out'}} Logout</a>
-      </div>
-    </li>
-  </ul>
-
-</div>
+{{top-nav-bar me=model}}
 
 {{#main-container classes="intern"}}
   {{outlet}}
