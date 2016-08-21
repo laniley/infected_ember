@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg3130"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="menu_icons.svg">
+  <defs
+     id="defs3132">
+    <filter
+       id="filter3159"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence3161"
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91" />
+      <feDisplacementMap
+         id="feDisplacementMap3163"
+         in2="result91"
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite3165"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3173">
+      <rect
+         style="fill:#800000;fill-opacity:1;stroke:none"
+         id="rect3175"
+         width="156.94646"
+         height="156.94646"
+         x="-89.253227"
+         y="405.04187"
+         ry="10.96837"
+         transform="matrix(0.70707595,-0.70713761,0.70713761,0.70707595,0,0)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3173-1">
+      <rect
+         style="fill:#800000;fill-opacity:1;stroke:none"
+         id="rect3175-8"
+         width="156.94646"
+         height="156.94646"
+         x="-89.253227"
+         y="405.04187"
+         ry="10.96837"
+         transform="matrix(0.70707595,-0.70713761,0.70713761,0.70707595,0,0)" />
+    </clipPath>
+    <filter
+       id="filter3159-3"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence3161-0"
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91" />
+      <feDisplacementMap
+         yChannelSelector="A"
+         id="feDisplacementMap3163-3"
+         in2="result91"
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite3165-6"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
+    <filter
+       id="filter4006"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence4008"
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91" />
+      <feDisplacementMap
+         id="feDisplacementMap4010"
+         in2="result91"
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite4012"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4016">
+      <rect
+         style="opacity:0.22222224;fill:#00f914;fill-opacity:1;stroke:none"
+         id="rect4018"
+         width="109.86906"
+         height="108.10999"
+         x="230.91635"
+         y="476.93283"
+         ry="3.5168889" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3173-0">
+      <rect
+         style="fill:#800000;fill-opacity:1;stroke:none"
+         id="rect3175-0"
+         width="156.94646"
+         height="156.94646"
+         x="-89.253227"
+         y="405.04187"
+         ry="10.96837"
+         transform="matrix(0.70707595,-0.70713761,0.70713761,0.70707595,0,0)" />
+    </clipPath>
+    <filter
+       id="filter3159-1"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence3161-3"
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91" />
+      <feDisplacementMap
+         yChannelSelector="A"
+         id="feDisplacementMap3163-5"
+         in2="result91"
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite3165-5"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4058">
+      <rect
+         style="opacity:0.22222224;fill:#00f914;fill-opacity:1;stroke:none"
+         id="rect4060"
+         width="186.97578"
+         height="186.97578"
+         x="-444.4437"
+         y="240.3024"
+         ry="4.9969401"
+         transform="matrix(-8.6085772e-5,-1,1,-8.6085772e-5,0,0)" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="155.61003"
+     inkscape:cy="603.53626"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="848"
+     inkscape:window-x="196"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3135">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ff2500;fill-opacity:1;stroke:none;filter:url(#filter3159)"
+       d="m 323.99107,263.77679 c -3.79367,0 -6.84375,3.08133 -6.84375,6.875 l 0,61.71875 -61.71875,0 c -3.79367,0 -6.84375,3.05008 -6.84375,6.84375 l 0,20.59375 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 61.71875,0 0,61.71875 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 20.59375,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-61.71875 61.71875,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-20.59375 c 0,-3.79367 -3.05008,-6.84375 -6.84375,-6.84375 l -61.71875,0 0,-61.71875 c 0,-3.79367 -3.05008,-6.875 -6.84375,-6.875 l -20.59375,0 z"
+       id="rect3138"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.45052047,0.45055976,-0.45055976,0.45052047,299.23232,83.344134)"
+       clip-path="url(#clipPath3173)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\cross.png"
+       inkscape:export-xdpi="54"
+       inkscape:export-ydpi="54" />
+    <path
+       style="fill:#00f914;fill-opacity:1;stroke:none;filter:url(#filter4006)"
+       d="m 327.96875,479.125 c -1.61027,0.0226 -3.19433,0.82769 -4.40625,2.40625 L 273.75,546.40625 253.40625,521.375 c -1.43265,-1.76122 -3.7112,-1.73831 -5.09375,0.0625 l -8.625,11.25 c -1.38255,1.80081 -1.3389,4.67628 0.0937,6.4375 l 31.5,38.71875 c 1.43265,1.76122 3.67995,1.70706 5.0625,-0.0937 l 6.0625,-7.875 c 0.21977,-0.21852 0.42469,-0.45784 0.625,-0.71875 l 54.2813,-70.7188 c 2.42384,-3.15712 2.35541,-8.16229 -0.15625,-11.25 l -4.6875,-5.78125 c -1.25583,-1.54385 -2.88973,-2.3039 -4.5,-2.28125 z"
+       id="rect3985"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.91017439,0,0,0.92498396,30.747236,29.869279)"
+       clip-path="url(#clipPath4016)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\check.png"
+       inkscape:export-xdpi="91"
+       inkscape:export-ydpi="91" />
+    <path
+       style="fill:#00f914;fill-opacity:1;stroke:none;filter:url(#filter3159-1)"
+       d="m 323.99107,263.77679 c -3.79367,0 -6.84375,3.08133 -6.84375,6.875 l 0,61.71875 -61.71875,0 c -3.79367,0 -6.84375,3.05008 -6.84375,6.84375 l 0,20.59375 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 61.71875,0 0,61.71875 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 20.59375,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-61.71875 61.71875,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-20.59375 c 0,-3.79367 -3.05008,-6.84375 -6.84375,-6.84375 l -61.71875,0 0,-61.71875 c 0,-3.79367 -3.05008,-6.875 -6.84375,-6.875 l -20.59375,0 z"
+       id="rect3138-8"
+       inkscape:connector-curvature="0"
+       transform="matrix(-4.6041134e-5,0.53482861,-0.53482861,-4.6041134e-5,349.82814,212.19423)"
+       clip-path="url(#clipPath4058)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\cross.png"
+       inkscape:export-xdpi="54"
+       inkscape:export-ydpi="54" />
+  </g>
+</svg>

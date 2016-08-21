@@ -1,17 +1,27 @@
 $dark-red: #310911;
+$yellow: #FFBC03;
+$neon-red: #ff2500;
 $neon-green: #00f914;
 
 $background-color: $dark-red;
 
 $primary-text-color: white;
 $highlight-text-color: #00f914;
+$warning-text-color: $neon-red;
 
-$link-color: darken($highlight-text-color, 10%);
+$link-color: $highlight-text-color;
 $link-color-hover: $highlight-text-color;
+$link-color-active: $highlight-text-color;
+$link-bg: linear-gradient(to bottom, $background-color, darken($background-color, 5%));
+
+$top-nav-link-color: darken($highlight-text-color, 20%);
+$top-nav-link-color-hover: darken($highlight-text-color, 10%);
+$top-nav-link-color-active: $highlight-text-color;
 
 $button-color: black;
 $button-bg-color: $highlight-text-color;
 $button-bg-color-hover: $highlight-text-color;
+$button-bg: linear-gradient(to bottom, $button-bg-color, darken($button-bg-color, 20%));
 
 .green {
 	color: $neon-green;

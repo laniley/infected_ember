@@ -1,5 +1,5 @@
 <div class="welcome">
-  <div class="welcome-title large-text">
+  <div class="section-title">
     Hi {{model.user.first_name}},
     <br />
     Welcome to <span class="green">INFECTED</span>!
@@ -14,5 +14,7 @@
     <br/>
     Let's start now with creating your first infection.
   </div>
-  <div class="button">START</div>
+  {{#link-to "intern.infections.create"}}
+    <button>START</button>
+  {{/link-to}}
 </div>

@@ -36,18 +36,32 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         var user = store.query('user', { fb_id: response.id, mode: 'me' }).then(users => {
 
           if(Ember.isEmpty(users)) {
-            user = store.createRecord('user');
+            user = store.createRecord('user', {
+              'fb_id': response.id,
+              'first_name': response.first_name,
+              'last_name': response.last_name,
+              'max_infections': 1
+            });
+            me.set('user', user);
+            user.save();
             this.transitionTo('intern.welcome');
           }
           else {
             user = users.get('firstObject');
+            me.set('user', user);
+            user.setProperties({
+              'fb_id': response.id,
+              'first_name': response.first_name,
+              'last_name': response.last_name
+            });
+            user.save().then(user => {
+              if(Ember.isEmpty(user.get('infections'))) {
+                this.transitionTo('intern.infections.create');
+              }
+            });
           }
 
-          me.set('user', user);
-          user.set('fb_id', response.id);
-          user.set('first_name', response.first_name);
-          user.set('last_name', response.last_name);
-          user.save();
+
 
           this.loadFriends(me, response);
 

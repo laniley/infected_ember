@@ -51,6 +51,28 @@
 			float: right;
 		}
 
+		&.--center, &.--right {
+			&:not(.name) {
+				a {
+					cursor: pointer;
+					text-decoration: none;
+					color: $top-nav-link-color;
+					padding: 0 15px;
+					border-radius: 5px;
+					&.active {
+						color: $top-nav-link-color-active;
+						background: $link-bg;
+					}
+					&:not(.active) {
+						&:hover {
+							color: $top-nav-link-color-hover;
+							background: $link-bg;
+						}
+					}
+				}
+			}
+		}
+
 		li {
 			margin: 0 10px;
 			a {
@@ -59,20 +81,6 @@
 				i {
 					margin-right: 7px;
 				}
-			}
-		}
-	}
-
-	a {
-		cursor: pointer;
-		text-decoration: none;
-		color: $top-nav-link-color;
-		&.active {
-			color: $top-nav-link-color-active;
-		}
-		&:not(.active) {
-			&:hover {
-				color: $top-nav-link-color-hover;
 			}
 		}
 	}
