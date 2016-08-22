@@ -25,6 +25,17 @@
 	text-shadow: 0 1px 0 rgba(255,255,255,.4);
 }
 
+.tooltip span:before,
+.tooltip span:after {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	left: 50%;
+	margin-left: -8px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+
 .tooltip {
 	&.top {
 		span {
@@ -33,6 +44,22 @@
 				bottom: -8px;
 				border-bottom: 0;
 				border-top: 8px solid #ddd;
+			}
+		}
+  	}
+	&.right {
+		span {
+			left: 157px;
+    		bottom: -10px;
+			width: auto;
+			white-space: nowrap;
+			&:before, &:after {
+				left: -8px;
+			    top: 16px;
+			    border-bottom: 8px solid transparent;
+			    border-top: 8px solid transparent;
+			    border-left: 8px solid transparent;
+			    border-right: 8px solid #ddd;
 			}
 		}
   	}
@@ -50,17 +77,6 @@
 
 .tooltip:hover {
   border: 0; /* IE6 fix */
-}
-
-.tooltip span:before,
-.tooltip span:after {
-	content: "";
-	position: absolute;
-	z-index: 1000;
-	left: 50%;
-	margin-left: -8px;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
 }
 
 .tooltip span:before {
