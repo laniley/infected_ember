@@ -63,6 +63,7 @@ a {
 
 .row {
     display: flex;
+	max-width: 100%;
 }
 
 .column {
@@ -77,12 +78,15 @@ a {
 		transition: width 0.5s ease-in-out; /* Standard */
 		border-radius: 5px;
 		background: linear-gradient(to bottom, darken($background-color, 5%), $background-color);
-	    padding: 20px 0px 50px 0px;
+	    padding: 15px 0px 50px 0px;
 		&.closed {
 			width: 0;
 		}
 		&.opened {
-			width: 600px;
+			width: 650px;
+		}
+		h1:first-child {
+			margin-top: 0;
 		}
 	}
 }

@@ -15,9 +15,12 @@
         </div>
       {{/link-to}}
     {{else}}
-      <div class="list-item clickable locked tooltip">
-        {{fa-icon 'lock'}} Unlock
-        <span class="bottom">Coming soon</span>
+      <div class="list-item clickable locked">
+        {{#tooltip-component
+            direction="bottom"
+            tooltip="Coming soon"}}
+            {{fa-icon 'lock'}} Unlock
+        {{/tooltip-component}}
       </div>
     {{/if}}
   </div>
