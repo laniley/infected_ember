@@ -8,7 +8,9 @@ Model.extend({
   fb_id: attr('string'),
   first_name: attr('string'),
   last_name: attr('string'),
-  max_infections: attr('number'),
+  max_infections: attr('number', { defaultValue: 1 }),
+  eps: attr('number', { defaultValue: 5 }),
+  rps: attr('number', { defaultValue: 5 }),
 
   infections: hasMany('infection'),
 
