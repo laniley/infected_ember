@@ -1,1 +1,28 @@
-{{model.name}}
+<div class="infection">
+  <h1>
+    {{#tooltip-component
+        direction="bottom"
+        tooltip="These are the values that define how fast the distribution of your infection will proceed."}}
+        distribution
+    {{/tooltip-component}}
+  </h1>
+  {{infection/skill-progress
+    tooltip="The reproduction rate defines how many people you can infect per day."
+    skill-name="reproduction rate"}}
+  {{infection/skill-progress
+    tooltip="The incubation time decides how often you can start an infection wave. After every wave you have to wait for the incubation time to end."
+    skill-name="incubation time"}}
+  <h1>
+    {{#tooltip-component
+        direction="bottom"
+        tooltip="Higher defense skills make your infection harder to cure."}}
+        defense
+    {{/tooltip-component}}
+  </h1>
+  {{infection/skill-progress
+    tooltip="With a higher comlexity level your opponents will need more Research Points to cure your infection."
+    skill-name="complexity"}}
+  {{infection/skill-progress
+    tooltip="With a thicker membran it will take longer to cure your infection, even with a working drug."
+    skill-name="membran thickness"}}
+</div>

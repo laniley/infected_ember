@@ -1,0 +1,15 @@
+<div class="skill">
+  <div class="skill-name">
+    {{#tooltip-component
+        direction="bottom"
+        tooltip=tooltip}}
+        {{skill-name}}
+    {{/tooltip-component}}
+  </div>
+  <div class="skill-points">
+    {{#for-loop times=15 }}
+      <div class="skill-point"></div>
+    {{/for-loop}}
+    <img src="assets/images/plus.png" width="24px" height="24px" />
+  </div>
+</div>
