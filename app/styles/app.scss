@@ -161,14 +161,20 @@
 	}
 	.skill {
 		display: flex;
+	    flex-flow: row nowrap;
+		width: 600px;
 		align-items: center;
-		height: 50px;
+		line-height: 50px;
 	}
 	.skill-name {
 		width: 220px;
+		.tooltip-label {
+			white-space: nowrap;
+		}
 	}
 	.skill-points {
 		display: flex;
+	    align-items: center;
 		.for-loop {
 			display: flex;
 		}

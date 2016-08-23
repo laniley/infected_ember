@@ -4,6 +4,7 @@
   display: inline-block;
   text-decoration: none;
   outline: none;
+  line-height: 1.8rem;
 }
 
 .tooltip span {
@@ -65,7 +66,7 @@
   	}
 	&.bottom {
 		span {
-			top: 100%;
+			top: 110%;
 			&:before, &:after {
 				top: -8px;
 				border-bottom: 8px solid #ddd;
