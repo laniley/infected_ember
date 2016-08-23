@@ -1,15 +1,12 @@
-<div class="skill">
-  <div class="skill-name">
-    {{#tooltip-component direction="bottom" tooltip=tooltip}}
-      {{skill-name}}
-    {{/tooltip-component}}
-  </div>
-  <div class="skill-points">
-    {{#for-loop times=15 }}
+<div class="skill-points">
+  {{#for-loop times=15 as |currentTime|}}
+    {{#if (lte currentTime skill_progress)}}
+      <div class="skill-point active"></div>
+    {{else}}
       <div class="skill-point"></div>
-    {{/for-loop}}
-    {{#tooltip-component direction="right" tooltip="costs 2 EPs"}}
-      <img src="assets/images/plus.png" width="24px" height="24px" />
-    {{/tooltip-component}}
-  </div>
+    {{/if}}
+  {{/for-loop}}
+  {{#tooltip-component direction="right" tooltip="costs 2 EPs"}}
+    <img src="assets/images/plus.png" width="24px" height="24px" />
+  {{/tooltip-component}}
 </div>

@@ -1,0 +1,8 @@
+<div class="skill">
+  <div class="skill-name">
+    {{#tooltip-component direction="bottom" tooltip=skill.tooltip}}
+      {{skill.name}}
+    {{/tooltip-component}}
+  </div>
+  {{infection/skill-progress skill=skill infection=infection}}
+</div>

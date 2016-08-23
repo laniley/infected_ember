@@ -6,7 +6,7 @@
   {{/tooltip-component}}
 </h1>
 {{#each type.infection_skills as |skill|}}
-  {{infection/skill-progress
-    tooltip=skill.tooltip
-    skill-name=skill.name}}
+  {{infection/skill-component
+    infection=infection
+    skill=skill}}
 {{/each}}

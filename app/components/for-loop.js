@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   numOfTimes: Ember.computed('times', function() {
     var times = this.get('times');
     var timesArr = [];
-    for(var i = 0; i < times; i++) {
+    for(var i = 1; i <= times; i++) {
       timesArr.push(i);
     }
     return timesArr;
