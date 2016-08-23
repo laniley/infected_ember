@@ -1,0 +1,12 @@
+<h1>
+  {{#tooltip-component
+      direction="bottom"
+      tooltip=type.tooltip}}
+      {{type.name}}
+  {{/tooltip-component}}
+</h1>
+{{#each type.infection_skills as |skill|}}
+  {{infection/skill-progress
+    tooltip=skill.tooltip
+    skill-name=skill.name}}
+{{/each}}

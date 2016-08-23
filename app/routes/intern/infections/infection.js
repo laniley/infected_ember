@@ -8,6 +8,7 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
     this.get('parentController').set('content_is_closed', false);
+    controller.set('skill-types', this.store.peekAll('infection-skill-type'));
   },
 
   actions: {

@@ -87,6 +87,9 @@
 }
 
 .create {
+	.title {
+		white-space: nowrap;
+	}
 	.name {
 		margin: 45px 0 0 0;
 		input {
