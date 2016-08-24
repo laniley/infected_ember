@@ -279,6 +279,27 @@
          xChannelSelector="R"
          in="SourceGraphic" />
     </filter>
+    <filter
+       id="filter4449-6"
+       inkscape:label="Roughen"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Small-scale roughening to edges and content"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence4451-1"
+         numOctaves="3"
+         seed="0"
+         type="turbulence"
+         baseFrequency="0.04"
+         result="result91" />
+      <feDisplacementMap
+         id="feDisplacementMap4453-5"
+         in2="result91"
+         scale="6.6"
+         yChannelSelector="G"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -401,6 +422,56 @@
          id="path4399-0"
          d="m 29.113046,569.50504 32.845337,0"
          style="fill:none;stroke:#00f914;stroke-width:4.6354723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g4428-1"
+       style="stroke:#000000;filter:url(#filter4449-6)"
+       transform="translate(-63.709073,-3.0357206)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix_dark.png"
+       inkscape:export-xdpi="54"
+       inkscape:export-ydpi="54">
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4361-0"
+         d="m 62.857143,486.6479 c 19.243119,25.96807 -80.735223,42.38077 -17.132512,72.47813 5.336779,2.52542 18.253832,6.93288 19.632512,14.30758"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4361-6-9"
+         d="m 28.965219,486.6479 c -18.794306,21.32754 80.074731,43.65512 13.949493,73.33967 -7.482069,3.35881 -18.043833,9.98242 -18.59235,14.87462"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4399-7"
+         d="m 26.785714,495.93361 38.214286,0"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4401-3"
+         d="M 36.677864,505.16051 58.15547,504.921"
+         style="fill:none;stroke:#000000;stroke-width:4.40334511;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4403-0"
+         d="m 24.999999,531.96372 38.214286,-0.2745"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4405-8"
+         d="m 26.428571,543.07647 38.214286,0"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4399-0-1"
+         d="m 29.113046,569.50504 32.845337,0"
+         style="fill:none;stroke:#000000;stroke-width:4.6354723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>

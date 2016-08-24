@@ -7,6 +7,8 @@ export default Model.extend({
   fb_id: attr('string'),
   first_name: attr('string'),
   last_name: attr('string'),
+  gender: attr('string'),
+  locale: attr('string'),
   max_infections: attr('number', { defaultValue: 1 }),
   eps: attr('number', { defaultValue: 5 }),
   rps: attr('number', { defaultValue: 5 }),

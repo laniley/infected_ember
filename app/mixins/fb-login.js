@@ -3,8 +3,8 @@ import Ember from 'ember';
 
 export default Ember.Mixin.create({
 
-  scope: 'id,first_name,last_name,friends,invitable_friends',
-  
+  scope: 'id,first_name,last_name,gender,locale,friends,invitable_friends',
+
   getUserDataFromFB(callback) {
     console.log('Welcome!  Fetching your information.... ');
     var store = this.get('store');
@@ -23,6 +23,8 @@ export default Ember.Mixin.create({
               'fb_id': response.id,
               'first_name': response.first_name,
               'last_name': response.last_name,
+              'gender': response.gender,
+              'locale': response.locale,
               'max_infections': 1
             });
             me.set('user', user);
@@ -35,7 +37,9 @@ export default Ember.Mixin.create({
             user.setProperties({
               'fb_id': response.id,
               'first_name': response.first_name,
-              'last_name': response.last_name
+              'last_name': response.last_name,
+              'gender': response.gender,
+              'locale': response.locale
             });
             user.save().then(user => {
               if(Ember.isEmpty(user.get('infections'))) {
