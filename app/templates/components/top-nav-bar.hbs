@@ -16,19 +16,23 @@
         <span class="name">{{me.user.first_name}}</span>
         <span class="img"><img src={{me.user.img_url}} /></span>
       </div>
-    	<div class="logout" {{action 'logout'}}>
+    	<div class="dropdown-option logout" {{action 'logout'}}>
         <a href="#">{{fa-icon 'sign-out'}} Logout</a>
       </div>
     </li>
   </ul>
   <ul class="top-nav-bar-section --right">
     <li class="currency">
-      {{me.user.eps}}
-      <img src="assets/images/flask.png" width="24px" height="24px" />
+      {{#tooltip-component direction="bottom" tooltip="Your Research Points (RPs) Needed in the search for a cure for diseases you've been infected with."}}
+        {{me.user.rps}}
+        <img src="assets/images/flask.png" width="24px" height="24px" />
+      {{/tooltip-component}}
     </li>
     <li class="currency">
-      {{me.user.eps}}
-      <img src="assets/images/helix.png" height="24px" />
+      {{#tooltip-component direction="bottom" tooltip="Your Evolution Points (EPs) Needed in developing your infections."}}
+        {{me.user.eps}}
+        <img src="assets/images/helix.png" height="24px" />
+      {{/tooltip-component}}
     </li>
   </ul>
 </div>

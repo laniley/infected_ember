@@ -2,4 +2,9 @@
   {{#each skill-types as |type|}}
     {{infection/skill-type type=type infection=model}}
   {{/each}}
+  <div class="row button-row">
+    <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
+        SAVE
+    </button>
+  </div>
 </div>

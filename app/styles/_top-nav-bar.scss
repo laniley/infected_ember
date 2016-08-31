@@ -19,8 +19,14 @@
 		overflow: hidden;
 		transition: height 0.2s ease;
 		height: 55px;
+		.dropdown-option {
+			visibility: hidden;
+		}
 		&:hover {
 			height: 100px;
+			.dropdown-option {
+				visibility: visible;
+			}
 		}
 		.dropdown-title {
 			display: flex;
@@ -89,5 +95,10 @@
 				margin-left: 20px;
 			}
 		}
+	}
+
+	.tooltip-text {
+		white-space: normal;
+		width: 290px;
 	}
 }

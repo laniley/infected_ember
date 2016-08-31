@@ -35,8 +35,9 @@ button {
 	border: none;
 	cursor: pointer;
 	&.disabled {
-		color: #666;
-		cursor: no-drop;
+		color: #3c3b3b;
+	    background: #949393;
+	    cursor: default;
 	}
 	&:not(.disabled) {
 		background: $button-bg;
@@ -61,6 +62,10 @@ a {
 	}
 }
 
+h1 {
+	font-weight: normal;
+}
+
 .row {
     display: flex;
 	max-width: 100%;
@@ -83,7 +88,7 @@ a {
 			width: 0;
 		}
 		&.opened {
-			width: 650px;
+			width: 700px;
 		}
 		h1:first-child {
 			margin-top: 0;

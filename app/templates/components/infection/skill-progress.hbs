@@ -1,12 +1,19 @@
 <div class="skill-points">
   {{#for-loop times=15 as |currentTime|}}
-    {{#if (lte currentTime skill_progress)}}
-      <div class="skill-point active"></div>
+    {{#if (lte currentTime skill_progress_points)}}
+      <div class="skill-point unlocked"></div>
     {{else}}
-      <div class="skill-point"></div>
+      {{#if (lte currentTime marked_to_unlock)}}
+        <div class="skill-point marked_to_unlock"></div>
+      {{else}}
+        <div class="skill-point"></div>
+      {{/if}}
     {{/if}}
   {{/for-loop}}
-  {{#tooltip-component direction="right" tooltip=tooltip}}
-    <img src="assets/images/plus.png" width="24px" height="24px" {{action 'buy'}} />
+  {{#tooltip-component direction="bottom" tooltip=activate_tooltip cssClasses=activate_button_class}}
+    <img class="menu-icon {{if activate_button_is_active "active" "inactive"}}" src={{activate_button_src}} width="24px" height="24px" {{action 'activate'}} />
+  {{/tooltip-component}}
+  {{#tooltip-component direction="bottom" tooltip=deactivate_tooltip cssClasses=deactivate_button_class}}
+    <img class="menu-icon {{if deactivate_button_is_active "active" "inactive"}}" src={{deactivate_button_src}} width="24px" height="24px" {{action 'deactivate'}} />
   {{/tooltip-component}}
 </div>
