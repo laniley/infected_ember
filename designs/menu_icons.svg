@@ -606,7 +606,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -877,7 +877,7 @@
        id="g4428-1-1"
        style="fill:none;stroke:#666666;stroke-opacity:1;filter:url(#filter4449-6-5)"
        transform="translate(-134.42336,-0.53571929)"
-       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix_dark.png"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix_medium.png"
        inkscape:export-xdpi="54"
        inkscape:export-ydpi="54">
       <path

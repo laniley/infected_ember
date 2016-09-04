@@ -5,6 +5,7 @@ export default DS.Model.extend({
   user: DS.belongsTo('user'),
   name: DS.attr('string'),
   infection_skill_progresses: DS.hasMany('infection-skill-progress'),
+  infection_waves: DS.hasMany('infection-wave'),
 
   reproduction_rate: Ember.computed('infection_skill_progresses.length', function() {
     return DS.PromiseObject.create({

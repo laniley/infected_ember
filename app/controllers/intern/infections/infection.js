@@ -26,6 +26,12 @@ export default Ember.Controller.extend({
           }
         });
       }
+    },
+    startInfectionWave() {
+      this.get('model.reproduction_rate').then(reproduction_rate => {
+        let rate = (reproduction_rate.get('progress') + 1) * 5;
+        console.log(rate);
+      });
     }
   }
 });
