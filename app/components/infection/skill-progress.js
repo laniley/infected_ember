@@ -29,10 +29,10 @@ export default Ember.Component.extend({
 
   activate_button_class: Ember.computed('activate_button_is_active', function() {
     if(this.get('activate_button_is_active')) {
-      return "active";
+      return "menu-icon active";
     }
     else {
-      return "inactive";
+      return "menu-icon inactive";
     }
   }),
 
@@ -51,10 +51,10 @@ export default Ember.Component.extend({
 
   deactivate_button_class: Ember.computed('deactivate_button_is_active', function() {
     if(this.get('deactivate_button_is_active') > 0) {
-      return "active";
+      return "menu-icon active";
     }
     else {
-      return "inactive";
+      return "menu-icon inactive";
     }
   }),
 

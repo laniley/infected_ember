@@ -1,10 +1,35 @@
 <div class="infection">
-  {{#each skill-types as |type|}}
-    {{infection/skill-type type=type infection=model}}
-  {{/each}}
-  <div class="row button-row">
-    <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
-        SAVE
-    </button>
+  <div class="tabs">
+    <div class="tab">
+      {{#link-to 'intern.infections.infection' model.id (query-params section="stats")}}Stats{{/link-to}}
+    </div>
+    <div class="tab">
+      {{#link-to 'intern.infections.infection' model.id (query-params section="skills")}}Skills{{/link-to}}
+    </div>
+  </div>
+  <div class="content">
+    {{#if (eq section "stats")}}
+      <div class="stats medium-text">
+        {{model.reproduction_rate.progress}}
+        <div class="people_infected">0 people infected</div>
+      </div>
+
+      <div class="button-row">
+        <div class="row align-center">
+          start a new infection wave
+        </div>
+        <button {{action 'startInfectionWave'}}>start</button>
+      </div>
+    {{/if}}
+    {{#if (eq section "skills")}}
+      {{#each skill-types as |type|}}
+        {{infection/skill-type type=type infection=model}}
+      {{/each}}
+      <div class="row button-row">
+        <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
+            SAVE
+        </button>
+      </div>
+    {{/if}}
   </div>
 </div>

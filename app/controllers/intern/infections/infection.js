@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  queryParams: ['section'],
+  section: 'stats',
+
   save_button_is_active: Ember.computed('model.infection_skill_progresses.@each.marked_to_unlock', function() {
     let is_active = false;
     this.get('model').get('infection_skill_progresses').forEach(progress => {

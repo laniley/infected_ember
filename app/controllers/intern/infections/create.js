@@ -110,7 +110,7 @@ export default Ember.Controller.extend({
             () => {
               this.set('newInfectionNameStatus', 'saved');
               this.set('infection', infection);
-              this.transitionToRoute('intern.infections.infection', infection);
+              this.transitionToRoute('intern.infections.infection', infection, { queryParams: { section: 'skills' }});
             },
             // on failure
             response => {

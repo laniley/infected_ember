@@ -3,10 +3,8 @@
 
 @import "default-settings";
 
-@import "top-nav-bar";
-@import "tooltip";
-
 @import "routes";
+@import "components";
 
 .fb-button {
 	position: relative;
@@ -82,7 +80,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 100px;
+		margin-top: 150px;
 	}
 }
 

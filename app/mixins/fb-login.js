@@ -9,55 +9,60 @@ export default Ember.Mixin.create({
     console.log('Welcome!  Fetching your information.... ');
     var store = this.get('store');
 
-    FB.api('/me', { fields: this.get('scope') }, response => {
+    return new Ember.RSVP.Promise((resolve) => {
+      FB.api('/me', { fields: this.get('scope') }, response => {
 
-      if( !response.error ) {
+        if( !response.error ) {
 
-        console.log('Successful login for: ' + response.first_name + " " + response.last_name, response);
-        var me = store.peekRecord('me', 1);
-        // response.id = 10202654621741836; // for testing
-        var user = store.query('user', { fb_id: response.id, mode: 'me' }).then(users => {
+          console.log('Successful login for: ' + response.first_name + " " + response.last_name, response);
+          var me = store.peekRecord('me', 1);
+          // response.id = 10202654621741836; // for testing
 
-          if(Ember.isEmpty(users)) {
-            user = store.createRecord('user', {
-              'fb_id': response.id,
-              'first_name': response.first_name,
-              'last_name': response.last_name,
-              'gender': response.gender,
-              'locale': response.locale,
-              'max_infections': 1
-            });
-            me.set('user', user);
-            user.save();
-            this.transitionTo('intern.welcome');
-          }
-          else {
-            user = users.get('firstObject');
-            me.set('user', user);
-            user.setProperties({
-              'fb_id': response.id,
-              'first_name': response.first_name,
-              'last_name': response.last_name,
-              'gender': response.gender,
-              'locale': response.locale
-            });
-            user.save().then(user => {
-              if(Ember.isEmpty(user.get('infections'))) {
-                this.transitionTo('intern.infections.create');
-              }
-            });
-          }
+          store.query('user', { fb_id: response.id, mode: 'me' }).then(users => {
+            if(Ember.isEmpty(users)) {
+              let user = store.createRecord('user', {
+                'fb_id': response.id,
+                'first_name': response.first_name,
+                'last_name': response.last_name,
+                'gender': response.gender,
+                'locale': response.locale,
+                'max_infections': 1
+              });
+              me.set('user', user);
+              user.save();
+              resolve(this.transitionTo('intern.welcome'));
 
-          this.loadFriends(me, response);
-        });
-      }
-      else {
-        console.log(response.error);
-      }
-      if(callback) {
-        callback();
-      }
+            }
+            else {
+              let user = users.get('firstObject');
+              me.set('user', user);
+              user.setProperties({
+                'fb_id': response.id,
+                'first_name': response.first_name,
+                'last_name': response.last_name,
+                'gender': response.gender,
+                'locale': response.locale
+              });
+              user.save().then(user => {
+                if(Ember.isEmpty(user.get('infections'))) {
+                  resolve(this.transitionTo('intern.infections.create'));
+                }
+              });
+            }
+
+            this.loadFriends(me, response);
+          });
+        }
+        else {
+          console.log(response.error);
+        }
+        if(callback) {
+          callback();
+        }
+      });
     });
+
+
   },
 
   loadFriends(me, response) {
@@ -75,7 +80,7 @@ export default Ember.Mixin.create({
         aFriend.set('user', users.get('firstObject'));
       });
     });
-    // frinds not yet playing the game
+    // friends not yet playing the game
     console.log('invitable_friends', response.invitable_friends);
     response.invitable_friends.data.forEach(friend => {
       this.store.createRecord('friend', {

@@ -17,7 +17,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, FacebookLoginMixin, {
   },
 
   afterModel() {
-    this.getUserDataFromFB();
+    this.getUserDataFromFB(); // in /mixins/fb-login
     this.getGameDataFromDB();
   },
 

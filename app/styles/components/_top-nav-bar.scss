@@ -93,6 +93,9 @@
 			}
 			&.currency {
 				margin-left: 20px;
+				&:not(.active) {
+					color: $medium-grey;
+				}
 			}
 		}
 	}

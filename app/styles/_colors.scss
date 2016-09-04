@@ -1,7 +1,12 @@
-$dark-red: #310911;
+
 $yellow: #FFBC03;
-$neon-red: #ff2500;
 $neon-green: #00f914;
+$neon-red: #ff2500;
+$dark-red: #310911;
+
+$medium-grey: #666;
+$dark-grey: #333;
+
 
 $background-color: $dark-red;
 
@@ -9,8 +14,8 @@ $primary-text-color: white;
 $highlight-text-color: #00f914;
 $warning-text-color: $neon-red;
 
-$link-color: $highlight-text-color;
-$link-color-hover: $highlight-text-color;
+$link-color: $medium-grey;
+$link-color-hover: white;
 $link-color-active: $highlight-text-color;
 $link-bg: linear-gradient(to bottom, $background-color, darken($background-color, 5%));
 

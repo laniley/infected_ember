@@ -22,16 +22,20 @@
     </li>
   </ul>
   <ul class="top-nav-bar-section --right">
-    <li class="currency">
+    <li class="currency {{if (gt me.user.rps 0) "active"}}">
       {{#tooltip-component direction="bottom" tooltip="Your Research Points (RPs) Needed in the search for a cure for diseases you've been infected with."}}
         {{me.user.rps}}
         <img src="assets/images/flask.png" width="24px" height="24px" />
       {{/tooltip-component}}
     </li>
-    <li class="currency">
+    <li class="currency {{if (gt me.user.eps 0) "active"}}">
       {{#tooltip-component direction="bottom" tooltip="Your Evolution Points (EPs) Needed in developing your infections."}}
         {{me.user.eps}}
-        <img src="assets/images/helix.png" height="24px" />
+        {{#if (gt me.user.eps 0)}}
+          <img src="assets/images/helix.png" height="24px" />
+        {{else}}
+          <img src="assets/images/helix_medium.png" height="24px" />
+        {{/if}}
       {{/tooltip-component}}
     </li>
   </ul>

@@ -62,18 +62,26 @@
 		&.inactive {
 			cursor: default;
 		}
-	}
-	.tooltip {
-		margin-left: 10px;
-		&.inactive {
-			span {
-				display: none;
+		&.tooltip {
+			margin-left: 10px;
+			&.inactive {
+				span {
+					display: none;
+				}
 			}
 		}
 	}
 	.button-row {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		margin-top: 30px;
+		button {
+			margin-top: 10px;
+		}
+	}
+
+	.stats {
+		text-align: center;
 	}
 }
