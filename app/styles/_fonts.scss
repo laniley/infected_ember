@@ -1,4 +1,8 @@
 @font-face {
-  font-family: main_font;
-  src: url("/assets/fonts/28_days_later.ttf") format("truetype") /* Safari, Android, iOS, Chrome, Firefox */
+  	font-family: main_font;
+  	src: url("/assets/fonts/28_days_later.ttf") format("truetype"); /* Safari, Android, iOS, Chrome, Firefox */
 }
+
+.mono-text {
+	font-family: 'VT323', monospace;
+};

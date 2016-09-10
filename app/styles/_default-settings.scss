@@ -29,7 +29,7 @@ button {
     display: inline-block;
 	font-family: main_font;
     font-size: 2.5rem;
-	box-shadow: #666 0px -1px 3px, black 0px 0px 50px;
+	box-shadow: #333 0px -1px 3px, black 0px 0px 50px;
 	padding: 15px;
 	border-radius: 10px;
 	border: none;
@@ -45,6 +45,10 @@ button {
 		&:hover {
 			background: $button-bg-color-hover;
 		}
+	}
+	&.small {
+		padding: 5px 10px;
+		font-size: 1.5rem;
 	}
 }
 
@@ -64,6 +68,10 @@ a {
 
 h1 {
 	font-weight: normal;
+}
+
+table {
+	width: 100%;
 }
 
 .row {
@@ -125,7 +133,19 @@ h1 {
 	font-size: 2rem;
 }
 
+.small-text {
+	font-size: 1.5rem;
+    line-height: 1.5;
+}
+
 .align-center {
 	text-align: center;
 	justify-content: center;
+}
+
+.buy-button {
+	padding: 5px 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background: $button-bg-color-hover;
 }

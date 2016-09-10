@@ -469,7 +469,7 @@
       <feTurbulence
          id="feTurbulence4563-8-5"
          baseFrequency="0.05"
-         numOctaves="5"
+         numOctaves="7"
          type="fractalNoise"
          result="result91" />
       <feDisplacementMap
@@ -579,6 +579,47 @@
          xChannelSelector="R"
          in="SourceGraphic" />
     </filter>
+    <filter
+       id="filter4270"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence4272"
+         baseFrequency="0.18201058201058201 0.19576719576719578"
+         numOctaves="2"
+         type="fractalNoise"
+         result="result91"
+         seed="0" />
+      <feDisplacementMap
+         id="feDisplacementMap4274"
+         in2="result91"
+         scale="8.8235294117647065"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite4276"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4350">
+      <rect
+         style="opacity:0.25089608;fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4352"
+         width="160.54716"
+         height="160.54716"
+         x="282.21594"
+         y="47.782017" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -587,9 +628,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="-117.54128"
-     inkscape:cy="691.44568"
+     inkscape:zoom="1.979899"
+     inkscape:cx="26.638818"
+     inkscape:cy="818.41292"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -768,13 +809,6 @@
          style="fill:#ff2500;fill-opacity:1;stroke:none;filter:url(#filter4561-9)" />
     </g>
     <rect
-       style="opacity:0.25089608;fill:#666666;fill-opacity:1;stroke:none"
-       id="rect4609"
-       width="100"
-       height="100"
-       x="-229.28572"
-       y="236.6479" />
-    <rect
        style="opacity:0.25089608000000002;fill:none;fill-opacity:1;stroke:none"
        id="rect4609-8"
        width="100"
@@ -923,5 +957,26 @@
          d="m 29.113046,569.50504 32.845337,0"
          style="fill:none;stroke:#666666;stroke-width:4.6354723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
+    <g
+       style="stroke-width:13.96815681;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4270)"
+       id="g3977"
+       transform="matrix(0.67272241,0,0,0.67272241,14.06708,25.760194)" />
+    <path
+       id="path4005-8"
+       transform="matrix(0.6228699,0,0,0.6228699,-64.573588,70.878505)"
+       style="fill:none;stroke:#000000;stroke-width:15.08612251;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4270)"
+       d="m 390.94941,113.19085 -27.82055,73.64263 m -28.6388,-74.46088 27.82055,73.64263 m 72.82438,-72.27888 -72.55163,73.64263 m -72.82437,-74.46088 72.55162,73.64263 M 392.57892,110.0042 374.59139,70.009918 M 334.49707,110.82246 352.4846,70.828176 m -32.17756,-1.550145 -29.81485,43.094579 144.72785,0 C 402.67769,68.187021 403.22319,68.732526 403.22319,68.732526 m -82.45302,0 81.44438,0"
+       clip-path="url(#clipPath4350)"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\diamond_dark.png"
+       inkscape:export-xdpi="54"
+       inkscape:export-ydpi="54" />
+    <rect
+       style="opacity:0.25089608;fill:#666666;fill-opacity:1;stroke:none"
+       id="rect4609-82"
+       width="100"
+       height="100"
+       x="-181.82491"
+       y="214.44321" />
   </g>
 </svg>

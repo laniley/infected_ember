@@ -11,24 +11,65 @@
     {{#if (eq section "stats")}}
       <div class="stats medium-text">
         <div class="people_infected">0 people infected</div>
+        {{#unless model.infection_waves.isPending}}
+          <div class="next_wave_available_info small-text">
+            {{!-- {{#if next_wave_available}} --}}
+              <div class="button-row">
+                <button {{action 'startInfectionWave'}}>start new wave</button>
+              </div>
+            {{!-- {{else}}
+              <div>next wave available in</div>
+              <div class="mono-text">
+                {{#if (lt hours_till_next_wave_total.content 10)}}0{{/if}}{{hours_till_next_wave_total.content}}:
+                {{#if (lt minutes_till_next_wave_rest.content 10)}}0{{/if}}{{minutes_till_next_wave_rest.content}}:
+                {{#if (lt seconds_till_next_wave_rest.content 10)}}0{{/if}}{{seconds_till_next_wave_rest.content}}
+              </div>
+              <div>or buy now for <button class="small buy">{{next_wave_price.content}} <img src="assets/images/diamond_dark.png" width="24px" height="24px" /></button></div>
+            {{/if}} --}}
+          </div>
+          <div class="title">Active Waves</div>
+          <div class="content small-text">
+            {{#if (gt model.infection_waves.length 0)}}
+              <div class="row">
+                <div class="--ends_in">ends in</div>
+                <div class="--transmissions">transmissions</div>
+                <div class="--results">results</div>
+              </div>
+              <div>
+                {{#each model.infection_waves as |wave index|}}
+                  <div class="row">
+                    <div class="--ends_in">
+                      <div class="--body mono-text">
+                        {{wave.days_till_end}}:
+                        {{#if (lt wave.hours_till_end_rest 10)}}0{{/if}}{{wave.hours_till_end_rest}}:
+                        {{#if (lt wave.minutes_till_end_rest 10)}}0{{/if}}{{wave.minutes_till_end_rest}}:
+                        {{#if (lt wave.seconds_till_end_rest 10)}}0{{/if}}{{wave.seconds_till_end_rest}}
+                      </div>
+                    </div>
+                    <div class="--transmissions mono-text">{{wave.infection_transmissions.length}} / {{max_recipients.content}}</div>
+                  </div>
+                {{/each}}
+              </div>
+            {{else}}
+              No active waves available.
+            {{/if}}
+          </div>
+        {{/unless}}
       </div>
+    {{/if}}
 
-      <div class="button-row">
-        <div class="row align-center">
-          start a new infection wave
-        </div>
-        <button {{action 'startInfectionWave'}}>start</button>
-      </div>
-    {{/if}}
     {{#if (eq section "skills")}}
-      {{#each skill-types as |type|}}
-        {{infection/skill-type type=type infection=model}}
-      {{/each}}
-      <div class="row button-row">
-        <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
-            SAVE
-        </button>
+      <div class="skills">
+        {{#each skill-types as |type|}}
+          {{infection/skill-type type=type infection=model}}
+        {{/each}}
+        <div class="row button-row">
+          <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
+              SAVE
+          </button>
+        </div>
       </div>
     {{/if}}
+
   </div>
 </div>

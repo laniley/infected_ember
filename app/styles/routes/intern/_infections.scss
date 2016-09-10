@@ -2,6 +2,11 @@
 	text-align: left;
 	padding: 0 20px;
 	font-size: 24px;
+	.button-row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	h1 {
 		font-size: 36px;
 		margin-bottom: 0;
@@ -71,17 +76,51 @@
 			}
 		}
 	}
-	.button-row {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 30px;
-		button {
-			margin-top: 10px;
+	.skills {
+		.button-row {
+			margin-top: 30px;
+			button {
+				margin-top: 10px;
+			}
 		}
 	}
 
 	.stats {
 		text-align: center;
+	    white-space: nowrap;
+		.people_infected {
+		    padding: 5px 0 20px 0;
+			border-bottom: 2px solid $highlight-text-color;
+		}
+		.next_wave_available_info {
+			padding: 20px 0;
+			border-bottom: 2px solid $highlight-text-color;
+		}
+		.title {
+			padding: 20px 0;
+		}
+		.mono-text {
+			font-size: 30px;
+		}
+		.--ends_in {
+			min-width:200px;
+			width: 33.33%;
+		}
+		.--transmissions {
+			min-width:200px;
+			width: 33.33%;
+		}
+		.--results {
+			min-width:200px;
+			width: 33.33%;
+		}
+		button {
+			&.buy {
+				margin: 0 10px;
+				i {
+					font-size: 28px;
+				}
+			}
+		}
 	}
 }
