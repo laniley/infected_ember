@@ -12,6 +12,12 @@ Router.map(function() {
       this.route('infection', { path: '/:infection_id' });
       this.route('create');
     });
+    this.route('monitor');
+    this.route('leaderboard');
+    this.route('lab', function() {
+      this.route('infections');
+      this.route('skills');
+    });
   });
   this.route('login');
 });

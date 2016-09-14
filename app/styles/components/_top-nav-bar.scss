@@ -1,45 +1,63 @@
+$top-nav-link-color: $link-color;
+$top-nav-link-color-hover: $link-color-hover;
+$top-nav-link-color-active: $link-color-active;
+
+$top-nav-bar-bg: linear-gradient(to bottom, $background-color, darken($background-color, 5%));
+
+$menu-breakpoint: 700px;
+
 .top-nav-bar {
+	position: absolute;
+    display: flex;
 	font-family: main_font;
 	font-size: 24px;
 	color: $highlight-text-color;
-	position: absolute;
-	padding: 0 15px;
+    padding: 10px 15px 0;
 	left: 0;
 	right: 0;
+
+	.top-nav-bar-bg {
+		background: $top-nav-bar-bg;
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		height: 100%;
+	}
 
 	.name {
 		a { color: $highlight-text-color; }
 		h1 {
 			margin: 0;
 		}
+		.text {
+			margin-left: 10px;
+		}
 	}
 
 	.account-dropdown {
 		cursor: pointer;
 		overflow: hidden;
-		transition: height 0.2s ease;
-		height: 55px;
-		.dropdown-option {
+		.dropdown-options {
+			position: absolute;
+			right: 0;
+			transition: height 0.2s ease;
+			height: 0;
+			overflow: hidden;
 			visibility: hidden;
+			// display: none;
+			padding: 10px;
 		}
 		&:hover {
-			height: 100px;
-			.dropdown-option {
+			.dropdown-options {
 				visibility: visible;
+				height: 50px;
+				// display: block;
 			}
 		}
 		.dropdown-title {
 			display: flex;
-			align-items: center;
-			.name {
-				margin-right: 10px;
-			}
-			.img {
-				img {
-					border: 2px solid $highlight-text-color;
-					border-radius: 5px;
-				}
-			}
+		    justify-content: flex-end;
 		}
 	}
 
@@ -47,7 +65,7 @@
 		display: flex;
 		align-items: center;
 		list-style-type: none;
-		min-height: 55px;
+
 		&.--left {
 			float: left;
 		    padding-left: 0;
@@ -55,11 +73,14 @@
 		&.--center {
 			float: left;
 			margin-left: 50px;
+			@media (max-width: $menu-breakpoint) {
+				display: none;
+			}
 		}
-		&.--right, &.--dropdown {
-			float: right;
+		&.--right {
+			flex-grow: 2;
+			justify-content: flex-end;
 		}
-
 		&.--center, &.--dropdown {
 			&:not(.name) {
 				a {
@@ -70,33 +91,57 @@
 					border-radius: 5px;
 					&.active {
 						color: $top-nav-link-color-active;
-						background: $link-bg;
 					}
 					&:not(.active) {
 						&:hover {
 							color: $top-nav-link-color-hover;
-							background: $link-bg;
 						}
 					}
 				}
 			}
 		}
+		.link {
+			display: flex;
+    		align-items: center;
+			.icon {
+			    display: flex;
+			}
+			.title {
+				@media (max-width: 1170px) {
+					display: none;
+				}
+			}
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
 
-		li {
-			margin: 0 10px;
-			a {
-				display: flex;
-			    align-items: center;
-				i {
-					margin-right: 7px;
-				}
+	.currencies {
+	    display: flex;
+		margin-right: 20px;
+		.currency {
+			margin-right: 30px;
+			&:not(.active) {
+				color: $medium-grey;
 			}
-			&.currency {
-				margin-left: 20px;
-				&:not(.active) {
-					color: $medium-grey;
-				}
-			}
+		}
+	}
+
+	.account-img {
+		@media (max-width: $menu-breakpoint) {
+			display: none;
+		}
+		img {
+			border: 2px solid $highlight-text-color;
+			border-radius: 5px;
+			width: 45px;
+		}
+	}
+
+	.nav-icon {
+		@media (min-width: $menu-breakpoint) {
+			display: none;
 		}
 	}
 

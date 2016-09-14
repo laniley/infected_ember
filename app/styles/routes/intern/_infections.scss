@@ -109,6 +109,12 @@
 		.--transmissions {
 			min-width:200px;
 			width: 33.33%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				margin-left: 15px;
+			}
 		}
 		.--results {
 			min-width:200px;

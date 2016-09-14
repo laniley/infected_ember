@@ -599,7 +599,7 @@
       <feDisplacementMap
          id="feDisplacementMap4274"
          in2="result91"
-         scale="8.8235294117647065"
+         scale="17.123287671232877"
          result="result5"
          xChannelSelector="R"
          in="SourceGraphic" />
@@ -620,6 +620,48 @@
          x="282.21594"
          y="47.782017" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4350-1">
+      <rect
+         style="opacity:0.25089608;fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4352-7"
+         width="160.54716"
+         height="160.54716"
+         x="282.21594"
+         y="47.782017" />
+    </clipPath>
+    <filter
+       id="filter4270-4"
+       inkscape:label="Torn edges"
+       inkscape:menu="Distort"
+       inkscape:menu-tooltip="Displace the outside of shapes and pictures without altering their content"
+       height="1.4"
+       y="-0.2"
+       width="1.4"
+       x="-0.2"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence4272-0"
+         baseFrequency="0.18201058201058201 0.19576719576719578"
+         numOctaves="2"
+         type="fractalNoise"
+         result="result91"
+         seed="0" />
+      <feDisplacementMap
+         yChannelSelector="A"
+         id="feDisplacementMap4274-9"
+         in2="result91"
+         scale="17.123288"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic" />
+      <feComposite
+         id="feComposite4276-4"
+         in2="result5"
+         in="SourceGraphic"
+         operator="atop" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -636,8 +678,8 @@
      showgrid="false"
      inkscape:window-width="1878"
      inkscape:window-height="928"
-     inkscape:window-x="13"
-     inkscape:window-y="21"
+     inkscape:window-x="21"
+     inkscape:window-y="27"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata3135">
@@ -978,5 +1020,15 @@
        height="100"
        x="-181.82491"
        y="214.44321" />
+    <path
+       id="path4005-8-8"
+       transform="matrix(0.6228699,0,0,0.6228699,-220.22798,69.018759)"
+       style="fill:none;stroke:#00f914;stroke-width:15.08612250999999900;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4270-4)"
+       d="m 390.94941,113.19085 -27.82055,73.64263 m -28.6388,-74.46088 27.82055,73.64263 m 72.82438,-72.27888 -72.55163,73.64263 m -72.82437,-74.46088 72.55162,73.64263 M 392.57892,110.0042 374.59139,70.009918 M 334.49707,110.82246 352.4846,70.828176 m -32.17756,-1.550145 -29.81485,43.094579 144.72785,0 C 402.67769,68.187021 403.22319,68.732526 403.22319,68.732526 m -82.45302,0 81.44438,0"
+       clip-path="url(#clipPath4350-1)"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\diamond.png"
+       inkscape:export-xdpi="54"
+       inkscape:export-ydpi="54" />
   </g>
 </svg>

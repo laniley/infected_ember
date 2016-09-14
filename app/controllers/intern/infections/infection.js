@@ -67,7 +67,7 @@ export default Ember.Controller.extend({
     return DS.PromiseObject.create({
       promise: this.get('seconds_till_next_wave_total').then(seconds_till_next_wave_total => {
         if(!Ember.isEmpty(seconds_till_next_wave_total)) {
-          return Math.floor(seconds_till_next_wave_total / 1000);
+          return Math.floor((seconds_till_next_wave_total + 1000) / 1000);
         }
         else {
           return '';
@@ -161,12 +161,37 @@ export default Ember.Controller.extend({
             response.to.forEach(recipient => {
               let transmission = this.store.createRecord('infection-transmission', {
                 infection_wave: wave,
-                fb_id: recipient
+                recipient_fb_id: recipient
               });
               transmission.save();
             });
           });
         });
+      });
+    },
+    addTransmissions(wave) {
+      this.get('max_recipients').then(max_recipients => {
+        let remaining_recipients = max_recipients - wave.get('infection_transmissions.length');
+        if(remaining_recipients > 0) {
+          let infection = this.get('model');
+          let user_name = this.get('model.user.name');
+          FB.ui({
+            method: 'apprequests',
+            message: 'You\'ve been infected with "' + infection.get('name') + '" by ' + user_name,
+            max_recipients: remaining_recipients
+          }, response => {
+            console.log(response);
+            if(response.to.length > 0) {
+              response.to.forEach(recipient => {
+                let transmission = this.store.createRecord('infection-transmission', {
+                  infection_wave: wave,
+                  recipient_fb_id: recipient
+                });
+                transmission.save();
+              });
+            }
+          });
+        }
       });
     }
   }

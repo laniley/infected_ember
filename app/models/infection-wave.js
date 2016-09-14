@@ -11,6 +11,22 @@ export default DS.Model.extend({
   ends_at: DS.attr('date'),
   created_at: DS.attr('date'),
 
+  successful_transmissions: Ember.computed('infection_transmissions.length', function() {
+    return DS.PromiseObject.create({
+      promise: this.get('infection_transmissions').then(infection_transmissions => {
+        return infection_transmissions.filterBy('status', 1);
+      })
+    });
+  }),
+
+  infection_failed: Ember.computed('infection_transmissions.length', function() {
+    return DS.PromiseObject.create({
+      promise: this.get('infection_transmissions').then(infection_transmissions => {
+        return infection_transmissions.filterBy('status', 2);
+      })
+    });
+  }),
+
   seconds_till_end_total: Ember.computed('clock.time', 'ends_at', function() {
     if(this.get('ends_at') !== undefined) {
       return Math.floor((this.get('ends_at').getTime() - this.get('clock.time')) / 1000);

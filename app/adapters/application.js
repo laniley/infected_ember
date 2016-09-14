@@ -5,5 +5,5 @@ import ENV from '../config/environment';
 export default DS.RESTAdapter.extend(DataAdapterMixin, {
   host: ENV.backend_url,
   namespace: ENV.backend_namespace,
-  authorizer: 'authorizer:token'
+  authorizer: 'authorizer:token',
 });

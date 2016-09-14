@@ -1,42 +1,77 @@
 <div class="top-nav-bar">
+  <div class="top-nav-bar-bg"></div>
+  <div class="top-nav-bar-section --left">
+    <div class="name">
+      <h1>
+        {{#link-to 'intern'}}
+          <span class="logo">*</span>
+          <span class="text not-on-medium">INFECTED</span>
+        {{/link-to}}
+      </h1>
+    </div>
+  </div>
 
-  <ul class="top-nav-bar-section --left">
-    <li class="name">
-      <h1>{{#link-to 'intern'}}* INFECTED{{/link-to}}</h1>
-    </li>
-  </ul>
 
-  <ul class="top-nav-bar-section --center">
-    {{#link-to 'intern.infections'}}<li>Infections</li>{{/link-to}}
-  </ul>
+  <div class="top-nav-bar-section --center">
+    {{#link-to 'intern.monitor'}}
+      <div class="link">
+        <div class="icon">{{fa-icon 'heartbeat'}}</div>
+        <div class="title">Monitor</div>
+      </div>
+    {{/link-to}}
+  </div>
+  <div class="top-nav-bar-section --center">
+    {{#link-to 'intern.lab'}}
+      <div class="link">
+        <div class="icon">{{fa-icon 'medkit'}}</div>
+        <div class="title">Lab</div>
+      </div>
+    {{/link-to}}
+  </div>
+  <div class="top-nav-bar-section --center">
+    {{#link-to 'intern.leaderboard'}}
+      <div class="link">
+        <div class="icon">{{fa-icon 'trophy'}}</div>
+        <div class="title">Leaderboard</div>
+      </div>
+    {{/link-to}}
+  </div>
 
-  <ul class="top-nav-bar-section --dropdown">
+  <div class="top-nav-bar-section --right">
+    <div class="currencies">
+      <div class="currency {{if (gt me.user.rps 0) "active"}}">
+        {{#tooltip-component direction="bottom" tooltip="Your diamonds. A special currency which you can use to speed up your development."}}
+          {{me.user.rps}}
+          <img src="assets/images/diamond.png" width="24px" height="24px" />
+        {{/tooltip-component}}
+      </div>
+      <div class="currency {{if (gt me.user.rps 0) "active"}}">
+        {{#tooltip-component direction="bottom" tooltip="Your Research Points (RPs) Needed in the search for a cure for diseases you've been infected with."}}
+          {{me.user.rps}}
+          <img src="assets/images/flask.png" width="24px" height="24px" />
+        {{/tooltip-component}}
+      </div>
+      <div class="currency {{if (gt me.user.eps 0) "active"}}">
+        {{#tooltip-component direction="bottom" tooltip="Your Evolution Points (EPs) Needed in developing your infections."}}
+          {{me.user.eps}}
+          {{#if (gt me.user.eps 0)}}
+            <img src="assets/images/helix.png" height="24px" />
+          {{else}}
+            <img src="assets/images/helix_medium.png" height="24px" />
+          {{/if}}
+        {{/tooltip-component}}
+      </div>
+    </div>
     <li class="account-dropdown">
       <div class="dropdown-title">
-        <span class="name">{{me.user.first_name}}</span>
-        <span class="img"><img src={{me.user.img_url}} /></span>
+        <span class="account-img"><img src={{me.user.img_url}} /></span>
+        <span class="nav-icon">{{fa-icon 'navicon'}}</span>
       </div>
-    	<div class="dropdown-option logout" {{action 'logout'}}>
+    	<div class="dropdown-options logout" {{action 'logout'}}>
         <a href="#">{{fa-icon 'sign-out'}} Logout</a>
       </div>
     </li>
-  </ul>
-  <ul class="top-nav-bar-section --right">
-    <li class="currency {{if (gt me.user.rps 0) "active"}}">
-      {{#tooltip-component direction="bottom" tooltip="Your Research Points (RPs) Needed in the search for a cure for diseases you've been infected with."}}
-        {{me.user.rps}}
-        <img src="assets/images/flask.png" width="24px" height="24px" />
-      {{/tooltip-component}}
-    </li>
-    <li class="currency {{if (gt me.user.eps 0) "active"}}">
-      {{#tooltip-component direction="bottom" tooltip="Your Evolution Points (EPs) Needed in developing your infections."}}
-        {{me.user.eps}}
-        {{#if (gt me.user.eps 0)}}
-          <img src="assets/images/helix.png" height="24px" />
-        {{else}}
-          <img src="assets/images/helix_medium.png" height="24px" />
-        {{/if}}
-      {{/tooltip-component}}
-    </li>
-  </ul>
+
+  </div>
+
 </div>

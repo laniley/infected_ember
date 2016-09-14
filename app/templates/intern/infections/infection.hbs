@@ -10,14 +10,16 @@
   <div class="content">
     {{#if (eq section "stats")}}
       <div class="stats medium-text">
-        <div class="people_infected">0 people infected</div>
+        <div class="people_infected">
+          {{model.number_of_people_infected.content}} people infected
+        </div>
         {{#unless model.infection_waves.isPending}}
           <div class="next_wave_available_info small-text">
-            {{!-- {{#if next_wave_available}} --}}
+            {{#if next_wave_available}}
               <div class="button-row">
                 <button {{action 'startInfectionWave'}}>start new wave</button>
               </div>
-            {{!-- {{else}}
+            {{else}}
               <div>next wave available in</div>
               <div class="mono-text">
                 {{#if (lt hours_till_next_wave_total.content 10)}}0{{/if}}{{hours_till_next_wave_total.content}}:
@@ -25,7 +27,7 @@
                 {{#if (lt seconds_till_next_wave_rest.content 10)}}0{{/if}}{{seconds_till_next_wave_rest.content}}
               </div>
               <div>or buy now for <button class="small buy">{{next_wave_price.content}} <img src="assets/images/diamond_dark.png" width="24px" height="24px" /></button></div>
-            {{/if}} --}}
+            {{/if}}
           </div>
           <div class="title">Active Waves</div>
           <div class="content small-text">
@@ -46,7 +48,16 @@
                         {{#if (lt wave.seconds_till_end_rest 10)}}0{{/if}}{{wave.seconds_till_end_rest}}
                       </div>
                     </div>
-                    <div class="--transmissions mono-text">{{wave.infection_transmissions.length}} / {{max_recipients.content}}</div>
+                    <div class="--transmissions mono-text">
+                      {{wave.infection_transmissions.length}} / {{max_recipients.content}}
+                      <img
+                          class="menu-icon {{if (lt wave.infection_transmissions.length max_recipients.content) "active" "inactive"}}"
+                          src="{{if (lt wave.infection_transmissions.length max_recipients.content) "assets/images/plus.png" "assets/images/plus_inactive.png"}}"
+                          width="24px" height="24px" {{action 'addTransmissions' wave}} />
+                    </div>
+                    <div class="--results">
+                      {{wave.successful_transmissions.length}} / {{wave.infection_failed.length}}
+                    </div>
                   </div>
                 {{/each}}
               </div>

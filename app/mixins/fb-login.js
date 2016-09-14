@@ -4,6 +4,7 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
 
   scope: 'id,first_name,last_name,gender,locale,friends,invitable_friends',
+  session: Ember.inject.service('session'),
 
   getUserDataFromFB(callback) {
     console.log('Welcome!  Fetching your information.... ');
@@ -29,7 +30,9 @@ export default Ember.Mixin.create({
                 'max_infections': 1
               });
               me.set('user', user);
-              user.save();
+              user.save().then(user => {
+                this.get('session').set('data.user_id', user.get('id'));
+              });
               resolve(this.transitionTo('intern.welcome'));
 
             }
@@ -44,6 +47,7 @@ export default Ember.Mixin.create({
                 'locale': response.locale
               });
               user.save().then(user => {
+                this.get('session').set('data.user_id', user.get('id'));
                 if(Ember.isEmpty(user.get('infections'))) {
                   resolve(this.transitionTo('intern.infections.create'));
                 }
