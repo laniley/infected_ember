@@ -4,7 +4,8 @@ $top-nav-link-color-active: $link-color-active;
 
 $top-nav-bar-bg: linear-gradient(to bottom, $background-color, darken($background-color, 5%));
 
-$menu-breakpoint: 700px;
+$menu-breakpoint: 720px;
+$menu-breakpoint-min: $menu-breakpoint + 1;
 
 .top-nav-bar {
 	position: absolute;
@@ -37,22 +38,24 @@ $menu-breakpoint: 700px;
 
 	.account-dropdown {
 		cursor: pointer;
-		overflow: hidden;
 		.dropdown-options {
 			position: absolute;
+			top: 80px;
 			right: 0;
 			transition: height 0.2s ease;
 			height: 0;
 			overflow: hidden;
 			visibility: hidden;
-			// display: none;
-			padding: 10px;
+
+			.option {
+				background: $top-nav-bar-bg;
+				padding: 10px 20px;
+			}
 		}
 		&:hover {
 			.dropdown-options {
 				visibility: visible;
 				height: 50px;
-				// display: block;
 			}
 		}
 		.dropdown-title {
@@ -140,7 +143,7 @@ $menu-breakpoint: 700px;
 	}
 
 	.nav-icon {
-		@media (min-width: $menu-breakpoint) {
+		@media (min-width: $menu-breakpoint-min) {
 			display: none;
 		}
 	}
