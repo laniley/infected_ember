@@ -13,7 +13,7 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 	font-family: main_font;
 	font-size: 24px;
 	color: $highlight-text-color;
-    padding: 10px 15px 0;
+    padding: 0 10px;
 	left: 0;
 	right: 0;
 
@@ -27,54 +27,84 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 	}
 
 	.name {
-		a { color: $highlight-text-color; }
-		h1 {
-			margin: 0;
-		}
-		.text {
-			margin-left: 10px;
+		a {
+			display: flex;
+			align-items: center;
+			color: $highlight-text-color;
+			font-size: 48px;
+			.logo {
+				padding: 10px 0 0;
+				height: 60px;
+			}
+			.text {
+				margin-left: 10px;
+			}
 		}
 	}
 
-	.account-dropdown {
+	.dropdown {
+		display: flex;
+    	align-items: center;
+		height: 100%;
 		cursor: pointer;
-		.dropdown-options {
-			position: absolute;
-			top: 80px;
-			right: 0;
-			transition: height 0.2s ease;
-			height: 0;
-			overflow: hidden;
-			visibility: hidden;
 
-			.option {
-				background: $top-nav-bar-bg;
-				padding: 10px 20px;
-			}
-		}
-		&:hover {
-			.dropdown-options {
-				visibility: visible;
-				height: 50px;
-			}
-		}
 		.dropdown-title {
 			display: flex;
-		    justify-content: flex-end;
+			justify-content: flex-end;
+			align-items: center;
+			height: 100%;
+		}
+
+		.dropdown-options {
+			position: absolute;
+			z-index: 9999;
+			top: 70px;
+			right: 0;
+			-webkit-transition: height 0.2s ease-in;
+			transition: height 0.2s ease-in;
+			overflow: hidden;
+			height: 0;
+
+			@media (max-width: $menu-breakpoint) {
+				left: 0;
+			}
+
+			a {
+				display: block;
+			}
+
+			.option {
+				display: flex;
+				align-items: center;
+				background: $top-nav-bar-bg;
+				padding: 10px 20px;
+
+				@media (max-width: $menu-breakpoint) {
+					left: 0;
+					right: 0;
+				}
+
+				i {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		&.--open {
+			.dropdown-options {
+				height: 200px;
+			}
 		}
 	}
 
 	.top-nav-bar-section {
 		display: flex;
 		align-items: center;
-		list-style-type: none;
 
 		&.--left {
-			float: left;
 		    padding-left: 0;
 		}
 		&.--center {
-			float: left;
 			margin-left: 50px;
 			@media (max-width: $menu-breakpoint) {
 				display: none;
@@ -132,17 +162,21 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 	}
 
 	.account-img {
+		height: 45px;
+		width: 45px;
 		@media (max-width: $menu-breakpoint) {
 			display: none;
 		}
 		img {
 			border: 2px solid $highlight-text-color;
 			border-radius: 5px;
-			width: 45px;
+			height: 41px;
+			width: 41px;
 		}
 	}
 
 	.nav-icon {
+		padding: 10px;
 		@media (min-width: $menu-breakpoint-min) {
 			display: none;
 		}

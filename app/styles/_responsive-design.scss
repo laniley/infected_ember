@@ -4,13 +4,19 @@ $md-max: 1100px;
 
 .not-on-small {
 	@media (max-width: $sm-max) {
-		display: none;
+		display: none !important;
+	}
+}
+
+.only-on-small {
+	@media (min-width: $md-min) {
+		display: none !important;
 	}
 }
 
 .not-on-medium {
 	@media (max-width: $md-max) {
-		display: none;
+		display: none !important;
 	}
 }
 
