@@ -1,35 +1,46 @@
 .app-title {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
 	font-family: main_font;
 	color: $highlight-text-color;
 
 	font-size: 60px;
-	margin-top: 10px;
+	height: 30%;
 
-	@media (min-width: 400px) and (min-height: 400px) {
+	@media (min-height: 400px) {
 		font-size: 80px;
-		margin-top: 20px;
 	}
 
-	@media (min-width: 600px) and (min-height: 600px) {
+	@media (min-height: 600px) {
 		font-size: 100px;
-		margin-top: 20px;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-height: 800px) {
 		font-size: 120px;
-		margin-top: 50px;
 	}
 }
 
 .app-logo {
 	display: inline-block;
-	margin: 5% 0;
-	height: 30%;
+	height: 40%;
 	img {
 		height: 100%;
 	}
 }
 
 .fb-login-button-row {
-	margin-bottom: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	height: 30%;
+
+	.fb-button {
+		&.login {
+		    font-size: 24px;
+			// margin: 50px  0 0 -150px;
+		}
+	}
 }

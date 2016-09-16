@@ -1,5 +1,4 @@
-@import "colors";
-@import "fonts";
+@import "assets";
 
 @import "default-settings";
 
@@ -9,11 +8,7 @@
 @import "components";
 
 .fb-button {
-	position: relative;
-    left: 50%;
-	width: 300px;
-	margin: 50px  0 0 -150px;
-	padding: 3px 0;
+	padding: 5px 20px;
 
     box-shadow: black 0px 0px 50px;
 
@@ -33,7 +28,6 @@
 	color: #fff;
 	cursor: pointer;
 	font-weight: bold;
-	text-align: center;
 	text-shadow: 0 -1px 0 #354c8c;
 	white-space: nowrap;
 	font-family: helvetica, arial, sans-serif;
@@ -56,10 +50,6 @@
 	    background: #4c69ba;
 	    color: #8DA3E0;
 	    cursor: default;
-	}
-
-	&.login {
-	    font-size: 24px;
 	}
 
 	.fa {
