@@ -1,1 +1,11 @@
 @import "intern/infections";
+@import "intern/tutorial";
+
+.main-container {
+	&.intern {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 70px;
+	}
+}

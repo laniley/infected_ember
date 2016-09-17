@@ -80,24 +80,38 @@ ul {
 	padding: 0;
 }
 
+.main-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	overflow: auto;
+	.ps-scrollbar-y-rail {
+		visibility: hidden;
+	}
+}
+
 .section-title {
 	color: $highlight-text-color;
 	margin-bottom: 50px;
 	border-radius: 5px;
 	padding: 10px 25px;
-	background: $link-bg;
-}
-
-.normal-text {
-	font-size: 30px;
 }
 
 .large-text, .section-title,  {
-	font-size: 48px;
+	font-size: 24px;
+	@media (min-width: $md-min) {
+		font-size: 48px;
+	}
 }
 
 .medium-text {
-	font-size: 2rem;
+	font-size: 20px;
+	@media (min-width: $md-min) {
+		font-size: 30px;
+	}
 }
 
 .small-text {

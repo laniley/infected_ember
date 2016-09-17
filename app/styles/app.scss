@@ -1,8 +1,8 @@
 @import "assets";
 
-@import "default-settings";
-
 @import "responsive-design";
+
+@import "default-settings";
 
 @import "routes";
 @import "components";
@@ -54,25 +54,6 @@
 
 	.fa {
 	    margin-right: 5px;
-	}
-}
-
-.main-container {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-	overflow: auto;
-	.ps-scrollbar-y-rail {
-		visibility: hidden;
-	}
-	&.intern {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 150px;
 	}
 }
 

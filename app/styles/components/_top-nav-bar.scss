@@ -8,6 +8,7 @@ $menu-breakpoint: 720px;
 $menu-breakpoint-min: $menu-breakpoint + 1;
 
 .top-nav-bar {
+	z-index: 9999;
 	position: absolute;
     display: flex;
 	font-family: main_font;
@@ -57,7 +58,6 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 
 		.dropdown-options {
 			position: absolute;
-			z-index: 9999;
 			top: 70px;
 			right: 0;
 			-webkit-transition: height 0.2s ease-in;
@@ -92,7 +92,10 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 
 		&.--open {
 			.dropdown-options {
-				height: 200px;
+				height: 48px;
+				@media (max-width: $menu-breakpoint) {
+					height: 200px;
+				}
 			}
 		}
 	}
@@ -152,9 +155,13 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 
 	.currencies {
 	    display: flex;
-		margin-right: 20px;
+	    white-space: nowrap;
+
 		.currency {
-			margin-right: 30px;
+			margin-right: 25px;
+			@media (min-width: 400px) {
+				margin-right: 50px;
+			}
 			&:not(.active) {
 				color: $medium-grey;
 			}

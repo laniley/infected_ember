@@ -6,7 +6,7 @@ export default Ember.Mixin.create({
   scope: 'id,first_name,last_name,gender,locale,friends,invitable_friends',
   session: Ember.inject.service('session'),
 
-  getUserDataFromFB(callback) {
+  getUserDataFromFB() {
     console.log('Welcome!  Fetching your information.... ');
     var store = this.get('store');
 
@@ -20,25 +20,22 @@ export default Ember.Mixin.create({
           // response.id = 10202654621741836; // for testing
 
           store.query('user', { fb_id: response.id, mode: 'me' }).then(users => {
+            let user;
+            // new user
             if(Ember.isEmpty(users)) {
-              let user = store.createRecord('user', {
+              user = store.createRecord('user', {
                 'fb_id': response.id,
                 'first_name': response.first_name,
                 'last_name': response.last_name,
                 'gender': response.gender,
                 'locale': response.locale,
-                'max_infections': 1
+                'max_infections': 1,
+                'tutorial_step_id': 1
               });
-              me.set('user', user);
-              user.save().then(user => {
-                this.get('session').set('data.user_id', user.get('id'));
-              });
-              resolve(this.transitionTo('intern.welcome'));
-
             }
+            // existing user
             else {
-              let user = users.get('firstObject');
-              me.set('user', user);
+              user = users.get('firstObject');
               user.setProperties({
                 'fb_id': response.id,
                 'first_name': response.first_name,
@@ -46,22 +43,22 @@ export default Ember.Mixin.create({
                 'gender': response.gender,
                 'locale': response.locale
               });
-              user.save().then(user => {
-                this.get('session').set('data.user_id', user.get('id'));
-                if(Ember.isEmpty(user.get('infections'))) {
-                  resolve(this.transitionTo('intern.infections.create'));
-                }
-              });
             }
+
+            me.set('user', user);
+
+            user.save().then(user => {
+              this.get('session').set('data.user_id', user.get('id'));
+              if(user.get('tutorial_step_id') !== 0) {
+                resolve(this.transitionTo('intern.tutorial.tutorial_' + user.get('tutorial_step_id')));
+              }
+            });
 
             this.loadFriends(me, response);
           });
         }
         else {
           console.log(response.error);
-        }
-        if(callback) {
-          callback();
         }
       });
     });

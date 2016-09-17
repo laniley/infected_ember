@@ -7,16 +7,17 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('intern', function() {
-    this.route('welcome');
-    this.route('infections', function() {
-      this.route('infection', { path: '/:infection_id' });
-      this.route('create');
-    });
     this.route('monitor');
     this.route('leaderboard');
     this.route('lab', function() {
-      this.route('infections');
+      this.route('infections', function() {
+        this.route('infection', { path: '/:infection_id' });
+        this.route('create');
+      });
       this.route('skills');
+    });
+    this.route('tutorial', function() {
+      this.route('tutorial_1');
     });
   });
   this.route('login');
