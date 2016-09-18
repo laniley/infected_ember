@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   parentController: Ember.computed( function() {
-    return this.controllerFor('intern/infections');
+    return this.controllerFor('intern/lab/infections');
   }),
 
   setupController: function(controller, model) {

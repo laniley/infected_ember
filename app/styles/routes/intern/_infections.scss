@@ -1,12 +1,49 @@
+.infections {
+	.title {
+	    margin-top: 40px;
+		white-space: nowrap;
+	}
+	.name {
+		margin: 20px 0 0 0;
+		input {
+		    text-align: center;
+		    max-width: 70%;
+		}
+		.name-status-icon {
+			display: inline-block;
+		    position: absolute;
+		    line-height: 60px;
+		    margin-left: 15px;
+		    font-size: 30px;
+			&.not_correct {
+				color: $warning-text-color;
+			}
+			&.correct {
+				color: $neon-green;
+			}
+		}
+	}
+	.button-row {
+		margin: 20px 0;
+	}
+	.missing_requirements_message {
+		font-family: Helvetica;
+		height: 24px;
+		padding: 20px;
+	}
+}
+
 .infection {
 	text-align: left;
 	padding: 0 20px;
 	font-size: 24px;
+
 	.button-row {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+
 	h1 {
 		font-size: 36px;
 		margin-bottom: 0;
@@ -19,12 +56,23 @@
 			white-space: normal;
 		}
 	}
+
+	.skills {
+		.button-row {
+			margin-top: 30px;
+			button {
+				margin-top: 10px;
+			}
+		}
+	}
+
 	.skill {
 		display: flex;
 	    flex-flow: row nowrap;
 		align-items: center;
 		line-height: 50px;
 	}
+
 	.skill-name {
 		width: 220px;
 		min-width: 220px;
@@ -37,6 +85,7 @@
 			white-space: normal;
 		}
 	}
+
 	.skill-points {
 		display: flex;
 	    align-items: center;
@@ -48,6 +97,7 @@
 			text-align: center;
 		}
 	}
+
 	.skill-point {
 		border: 2px solid $neon-green;
 		margin-right: 10px;
@@ -60,6 +110,7 @@
 		    background: #055d0c;
 		}
 	}
+
 	.menu-icon {
 		&.active {
 			cursor: pointer;
@@ -73,14 +124,6 @@
 				span {
 					display: none;
 				}
-			}
-		}
-	}
-	.skills {
-		.button-row {
-			margin-top: 30px;
-			button {
-				margin-top: 10px;
 			}
 		}
 	}

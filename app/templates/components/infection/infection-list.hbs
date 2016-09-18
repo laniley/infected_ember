@@ -6,6 +6,12 @@
           {{infection.name}}
         </div>
       {{/link-to}}
+    {{else}}
+      {{#link-to 'intern.lab.infections.create'}}
+        <div class="list-item clickable">
+          create new
+        </div>
+      {{/link-to}}
     {{/each}}
     {{#if (gt model.user.max_infections model.user.infections.length)}}
       {{#link-to 'intern.infections.create'}}

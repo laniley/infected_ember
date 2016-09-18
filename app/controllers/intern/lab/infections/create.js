@@ -9,15 +9,6 @@ export default Ember.Controller.extend({
   visible: false,
   timeout: null,
 
-  parentController: Ember.computed( function() {
-    return this.controllerFor('infections');
-  }),
-
-  setupController: function(controller, model) {
-    this._super(controller, model);
-    this.get('parentController').set('content_is_closed', false);
-  },
-
   disabled: Ember.computed('requirementsForNewInfectionFulfilled', function() {
     if(this.get('requirementsForNewInfectionFulfilled')) {
       return "";
@@ -97,6 +88,9 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
+    back() {
+      history.back();
+    },
     save() {
       if(this.get('newInfectionNameStatus') === 'correct') {
         this.set('newInfectionNameStatus', 'unknown');
@@ -110,7 +104,7 @@ export default Ember.Controller.extend({
             () => {
               this.set('newInfectionNameStatus', 'saved');
               this.set('infection', infection);
-              this.transitionToRoute('intern.infections.infection', infection, { queryParams: { section: 'skills' }});
+              this.transitionToRoute('intern.lab.infections.infection', infection, { queryParams: { section: 'skills' }});
             },
             // on failure
             response => {

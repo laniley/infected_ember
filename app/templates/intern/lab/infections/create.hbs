@@ -1,36 +1,33 @@
-<div class="column content">
-  <div class="create">
-    <div class="title medium-text">Choose a name</div>
-    <div class="name">
-      {{input type=text size='25' value=nameInput max=50 min=3}}
-      <div class="name-status-icon inline-block {{newInfectionNameStatus}}">
-        {{#if visible}}
-          {{#if (eq newInfectionNameStatus "unknown")}}
-            {{fa-icon 'spinner' spin=true fixedWith=true}}
-          {{else}}
-            {{#if (eq newInfectionNameStatus "correct")}}
-              <img src="assets/images/check.png" width="24px" />
-            {{else}}
-              {{#if (not-eq newInfectionNameStatus "saved")}}
-                <img src="assets/images/cross.png" width="24px" />
-              {{/if}}
-            {{/if}}
+<div class="close" {{action 'back'}}>{{fa-icon 'close'}}</div>
+<div class="title medium-text">Choose a name</div>
+<div class="name">
+  {{input type=text size='25' value=nameInput max=50 min=3}}
+  <div class="name-status-icon inline-block {{newInfectionNameStatus}}">
+    {{#if visible}}
+      {{#if (eq newInfectionNameStatus "unknown")}}
+        {{fa-icon 'spinner' spin=true fixedWith=true}}
+      {{else}}
+        {{#if (eq newInfectionNameStatus "correct")}}
+          <img src="assets/images/check.png" width="24px" />
+        {{else}}
+          {{#if (not-eq newInfectionNameStatus "saved")}}
+            <img src="assets/images/cross.png" width="24px" />
           {{/if}}
         {{/if}}
-      </div>
-      <div class="missing_requirements_message">
-        {{#if visible}}
-          {{missing_requirements_message}}
-        {{/if}}
-        {{error}}
-      </div>
-    </div>
-    <div>
-      <button
-        class="{{if requirementsForNewInfectionFulfilled "active" "disabled"}}"
-        {{action 'save'}}>
-          SAVE
-      </button>
-    </div>
+      {{/if}}
+    {{/if}}
   </div>
+</div>
+<div class="button-row">
+  <button
+    class="{{if requirementsForNewInfectionFulfilled "active" "disabled"}}"
+    {{action 'save'}}>
+      SAVE
+  </button>
+</div>
+<div class="missing_requirements_message">
+  {{#if visible}}
+    {{missing_requirements_message}}
+  {{/if}}
+  {{error}}
 </div>

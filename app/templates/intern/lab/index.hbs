@@ -1,11 +1,11 @@
-<div class="row">
+<div class="row main-menu">
   <div class="column">
-    {{#link-to 'intern.lab.infections' class="section-title"}}
+    {{#link-to 'intern.lab.infections' class="section-title align-center"}}
       {{fa-icon 'shield'}} Vaccines
     {{/link-to}}
   </div>
   <div class="column">
-    {{#link-to 'intern.lab.infections' class="section-title"}}
+    {{#link-to 'intern.lab.infections' class="section-title align-center"}}
       * Infections
     {{/link-to}}
     {{infection/infection-list infections=model.user.infections}}

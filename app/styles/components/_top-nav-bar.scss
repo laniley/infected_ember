@@ -4,7 +4,7 @@ $top-nav-link-color-active: $link-color-active;
 
 $top-nav-bar-bg: linear-gradient(to bottom, $background-color, darken($background-color, 5%));
 
-$menu-breakpoint: 720px;
+$menu-breakpoint: 660px;
 $menu-breakpoint-min: $menu-breakpoint + 1;
 
 .top-nav-bar {
@@ -39,6 +39,9 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 			}
 			.text {
 				margin-left: 10px;
+				@media (max-width: 950px) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -76,7 +79,7 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 			.option {
 				display: flex;
 				align-items: center;
-				background: $top-nav-bar-bg;
+				background: linear-gradient(to bottom, #333, #000);
 				padding: 10px 20px;
 				line-height: 30px;
 
@@ -113,6 +116,9 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 		&.--center {
 			.link {
 				margin-left: 50px;
+				@media (max-width: 760px) {
+					margin-left: 20px;
+				}
 				@media (max-width: $menu-breakpoint) {
 					display: none;
 				}
@@ -165,7 +171,7 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 		.currency {
 			display: flex;
 			margin-right: 25px;
-			@media (min-width: 400px) {
+			@media (min-width: 430px) {
 				margin-right: 50px;
 			}
 			&:not(.active) {
@@ -173,7 +179,11 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 			}
 
 			i, img {
-				margin-left: 5px;
+				margin-right: 10px;
+			}
+
+			.tooltip-label {
+				align-items: baseline;
 			}
 		}
 	}

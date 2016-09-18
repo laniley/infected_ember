@@ -57,36 +57,6 @@
 	}
 }
 
-.create {
-	.title {
-		white-space: nowrap;
-	}
-	.name {
-		margin: 45px 0 0 0;
-		input {
-		    text-align: center;
-		}
-		.name-status-icon {
-			display: inline-block;
-		    position: absolute;
-		    line-height: 60px;
-		    margin-left: 15px;
-		    font-size: 30px;
-			&.not_correct {
-				color: $warning-text-color;
-			}
-			&.correct {
-				color: $neon-green;
-			}
-		}
-		.missing_requirements_message {
-		    font-family: Helvetica;
-			height: 24px;
-			margin-bottom: 20px;
-		}
-	}
-}
-
 .list {
 	font-size: 32px;
 	a, .list-item {
@@ -122,5 +92,17 @@
 		&.locked {
 			color: #666;
 		}
+	}
+}
+
+.close {
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
+	cursor: pointer;
+	color: $link-color;
+	font-size: 24px;
+	&:hover {
+		color: $link-color-hover;
 	}
 }

@@ -1,2 +1,8 @@
-<div class="section-title">Infections</div>
-{{infection/infection-list infections=model.user.infections}}
+<div class="row infections">
+  <div class="column">
+    {{#link-to 'intern.lab' class="section-title align-center"}}
+      * Infections
+    {{/link-to}}
+    {{infection/infection-list infections=model.user.infections content_is_closed=content_is_closed}}
+  </div>
+</div>

@@ -93,14 +93,28 @@ ul {
 	}
 }
 
+.main-menu {
+	@media (max-width: $sm-max) {
+		display: block;
+	}
+}
+
 .section-title {
+	display: flex;
 	color: $highlight-text-color;
+	&:hover {
+		color: $link-color-hover;
+	}
 	margin-bottom: 50px;
 	border-radius: 5px;
 	padding: 10px 25px;
+	font-size: 48px;
+	i {
+		margin-right: 15px;
+	}
 }
 
-.large-text, .section-title,  {
+.large-text  {
 	font-size: 24px;
 	@media (min-width: $md-min) {
 		font-size: 48px;
@@ -117,11 +131,6 @@ ul {
 .small-text {
 	font-size: 1.5rem;
     line-height: 1.5;
-}
-
-.align-center {
-	text-align: center;
-	justify-content: center;
 }
 
 .buy-button {
