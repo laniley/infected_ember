@@ -1,8 +1,7 @@
-{{!-- <div class="section-title">Infections</div> --}}
 <div class="row">
   <div class="column list">
-    {{#each model.user.infections as |infection|}}
-      {{#link-to 'intern.infections.infection' infection.id}}
+    {{#each infections as |infection|}}
+      {{#link-to 'intern.lab.infections.infection' infection.id}}
         <div class="list-item clickable">
           {{infection.name}}
         </div>

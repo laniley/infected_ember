@@ -15,6 +15,7 @@ Router.map(function() {
         this.route('create');
       });
       this.route('skills');
+      this.route('vaccines');
     });
     this.route('tutorial', function() {
       this.route('tutorial_1');

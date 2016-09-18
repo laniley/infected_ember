@@ -78,13 +78,16 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 				align-items: center;
 				background: $top-nav-bar-bg;
 				padding: 10px 20px;
+				line-height: 30px;
 
 				@media (max-width: $menu-breakpoint) {
 					left: 0;
 					right: 0;
 				}
 
-				i {
+				.icon {
+					text-align: center;
+					width: 30px;
 					margin-right: 10px;
 				}
 			}
@@ -108,9 +111,11 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 		    padding-left: 0;
 		}
 		&.--center {
-			margin-left: 50px;
-			@media (max-width: $menu-breakpoint) {
-				display: none;
+			.link {
+				margin-left: 50px;
+				@media (max-width: $menu-breakpoint) {
+					display: none;
+				}
 			}
 		}
 		&.--right {
@@ -158,12 +163,17 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 	    white-space: nowrap;
 
 		.currency {
+			display: flex;
 			margin-right: 25px;
 			@media (min-width: 400px) {
 				margin-right: 50px;
 			}
 			&:not(.active) {
 				color: $medium-grey;
+			}
+
+			i, img {
+				margin-left: 5px;
 			}
 		}
 	}
@@ -187,6 +197,11 @@ $menu-breakpoint-min: $menu-breakpoint + 1;
 		@media (min-width: $menu-breakpoint-min) {
 			display: none;
 		}
+	}
+
+	.science-icon {
+		margin-right: 10px;
+		font-size: 40px;
 	}
 
 	.tooltip-text {

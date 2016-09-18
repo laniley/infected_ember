@@ -670,16 +670,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="26.638818"
-     inkscape:cy="818.41292"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="-252.0048"
+     inkscape:cy="499.04429"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1878"
+     inkscape:window-width="1269"
      inkscape:window-height="928"
-     inkscape:window-x="21"
-     inkscape:window-y="27"
+     inkscape:window-x="417"
+     inkscape:window-y="92"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata3135">
@@ -702,7 +702,7 @@
        d="m 323.99107,263.77679 c -3.79367,0 -6.84375,3.08133 -6.84375,6.875 l 0,61.71875 -61.71875,0 c -3.79367,0 -6.84375,3.05008 -6.84375,6.84375 l 0,20.59375 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 61.71875,0 0,61.71875 c 0,3.79367 3.05008,6.84375 6.84375,6.84375 l 20.59375,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-61.71875 61.71875,0 c 3.79367,0 6.84375,-3.05008 6.84375,-6.84375 l 0,-20.59375 c 0,-3.79367 -3.05008,-6.84375 -6.84375,-6.84375 l -61.71875,0 0,-61.71875 c 0,-3.79367 -3.05008,-6.875 -6.84375,-6.875 l -20.59375,0 z"
        id="rect3138"
        inkscape:connector-curvature="0"
-       transform="matrix(0.45052047,0.45055976,-0.45055976,0.45052047,299.23232,83.344134)"
+       transform="matrix(0.45052047,0.45055976,-0.45055976,0.45052047,324.48613,-160.10263)"
        clip-path="url(#clipPath3173)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\cross.png"
        inkscape:export-xdpi="54"
@@ -712,14 +712,14 @@
        d="m 327.96875,479.125 c -1.61027,0.0226 -3.19433,0.82769 -4.40625,2.40625 L 273.75,546.40625 253.40625,521.375 c -1.43265,-1.76122 -3.7112,-1.73831 -5.09375,0.0625 l -8.625,11.25 c -1.38255,1.80081 -1.3389,4.67628 0.0937,6.4375 l 31.5,38.71875 c 1.43265,1.76122 3.67995,1.70706 5.0625,-0.0937 l 6.0625,-7.875 c 0.21977,-0.21852 0.42469,-0.45784 0.625,-0.71875 l 54.2813,-70.7188 c 2.42384,-3.15712 2.35541,-8.16229 -0.15625,-11.25 l -4.6875,-5.78125 c -1.25583,-1.54385 -2.88973,-2.3039 -4.5,-2.28125 z"
        id="rect3985"
        inkscape:connector-curvature="0"
-       transform="matrix(0.91017439,0,0,0.92498396,30.747236,29.869279)"
+       transform="matrix(0.91017439,0,0,0.92498396,-89.460916,467.26532)"
        clip-path="url(#clipPath4016)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\check.png"
        inkscape:export-xdpi="91"
        inkscape:export-ydpi="91" />
     <path
        style="fill:#00f914;fill-opacity:1;stroke:none;filter:url(#filter4335)"
-       d="m 136.00893,482.36161 c -1.48057,0 -2.65625,1.20693 -2.65625,2.6875 l 0,3.21875 c 0,1.48057 1.17568,2.65625 2.65625,2.65625 l 7.34375,0 0,23.0625 c 0,0.31087 0.0283,0.59794 0.125,0.875 l -25.34375,43.125 c -0.588,0.48946 -0.96875,1.23415 -0.96875,2.0625 l 0,3.21875 c 0,1.48057 1.20693,2.65625 2.6875,2.65625 l 74.125,0 c 1.48057,0 2.65625,-1.17568 2.65625,-2.65625 l 0,-3.21875 c 0,-0.93496 -0.46434,-1.74146 -1.1875,-2.21875 l -25.25,-43.0625 c 0.077,-0.25006 0.125,-0.50529 0.125,-0.78125 l 0,-23.0625 7.5,0 c 1.48057,0 2.65625,-1.17568 2.65625,-2.65625 l 0,-3.21875 c 0,-1.48057 -1.17568,-2.6875 -2.65625,-2.6875 l -10.1875,0 -3.21875,0 -15.1875,0 -3.21875,0 -10,0 z m 15.90625,8.5625 9.84375,0 0,23.0625 c 0,1.00033 0.53414,1.85428 1.34375,2.3125 l 10.3125,17.5625 -33.09375,0 10.375,-17.625 c 0.73133,-0.47586 1.21875,-1.30878 1.21875,-2.25 l 0,-23.0625 z"
+       d="m 140.04954,635.9048 c -1.48057,0 -2.65625,1.20693 -2.65625,2.6875 l 0,3.21875 c 0,1.48057 1.17568,2.65625 2.65625,2.65625 l 7.34375,0 0,23.0625 c 0,0.31087 0.0283,0.59794 0.125,0.875 l -25.34375,43.125 c -0.588,0.48946 -0.96875,1.23415 -0.96875,2.0625 l 0,3.21875 c 0,1.48057 1.20693,2.65625 2.6875,2.65625 l 74.125,0 c 1.48057,0 2.65625,-1.17568 2.65625,-2.65625 l 0,-3.21875 c 0,-0.93496 -0.46434,-1.74146 -1.1875,-2.21875 l -25.25,-43.0625 c 0.077,-0.25006 0.125,-0.50529 0.125,-0.78125 l 0,-23.0625 7.5,0 c 1.48057,0 2.65625,-1.17568 2.65625,-2.65625 l 0,-3.21875 c 0,-1.48057 -1.17568,-2.6875 -2.65625,-2.6875 l -10.1875,0 -3.21875,0 -15.1875,0 -3.21875,0 -10,0 z m 15.90625,8.5625 9.84375,0 0,23.0625 c 0,1.00033 0.53414,1.85428 1.34375,2.3125 l 10.3125,17.5625 -33.09375,0 10.375,-17.625 c 0.73133,-0.47586 1.21875,-1.30878 1.21875,-2.25 l 0,-23.0625 z"
        id="rect4062"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\flask.png"
        inkscape:export-xdpi="54"
@@ -728,7 +728,7 @@
     <g
        id="g4428"
        style="filter:url(#filter4449)"
-       transform="translate(8.9285714,-5.3571429)"
+       transform="translate(113.98444,292.63785)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix.png"
        inkscape:export-xdpi="54"
        inkscape:export-ydpi="54">
@@ -778,7 +778,7 @@
     <g
        id="g4428-1"
        style="stroke:#000000;filter:url(#filter4449-6)"
-       transform="translate(-63.709073,-3.0357206)"
+       transform="translate(-210.18119,290.91867)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix_dark.png"
        inkscape:export-xdpi="54"
        inkscape:export-ydpi="54">
@@ -827,7 +827,7 @@
     </g>
     <g
        id="g4599"
-       transform="matrix(0.91803587,0,0,0.88905502,24.644292,37.6664)"
+       transform="matrix(0.91803587,0,0,0.88905502,296.37533,42.717163)"
        clip-path="url(#clipPath4605)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\minus.png"
        inkscape:export-xdpi="54"
@@ -864,7 +864,8 @@
        id="g4647"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\plus.png"
        inkscape:export-xdpi="54"
-       inkscape:export-ydpi="54">
+       inkscape:export-ydpi="54"
+       transform="translate(3.0304576,132.32998)">
       <path
          inkscape:export-ydpi="54"
          inkscape:export-xdpi="54"
@@ -887,7 +888,7 @@
          style="opacity:0.25089608;fill:none;stroke:none" />
     </g>
     <g
-       transform="translate(1.0793846,-122.39061)"
+       transform="translate(-139.33182,133.17798)"
        id="g4647-8"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\plus.png"
        inkscape:export-xdpi="54"
@@ -915,7 +916,7 @@
     </g>
     <g
        id="g4599-9"
-       transform="matrix(0.91803587,0,0,0.88905502,14.555003,-71.619297)"
+       transform="matrix(0.91803587,0,0,0.88905502,10.514393,36.467025)"
        clip-path="url(#clipPath4605-3)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\minus_inactive.png"
        inkscape:export-xdpi="54"
@@ -952,7 +953,7 @@
     <g
        id="g4428-1-1"
        style="fill:none;stroke:#666666;stroke-opacity:1;filter:url(#filter4449-6-5)"
-       transform="translate(-134.42336,-0.53571929)"
+       transform="translate(-118.26092,287.35776)"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\helix_medium.png"
        inkscape:export-xdpi="54"
        inkscape:export-ydpi="54">
@@ -1005,7 +1006,7 @@
        transform="matrix(0.67272241,0,0,0.67272241,14.06708,25.760194)" />
     <path
        id="path4005-8"
-       transform="matrix(0.6228699,0,0,0.6228699,-64.573588,70.878505)"
+       transform="matrix(0.6228699,0,0,0.6228699,-389.8427,186.03589)"
        style="fill:none;stroke:#000000;stroke-width:15.08612251;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4270)"
        d="m 390.94941,113.19085 -27.82055,73.64263 m -28.6388,-74.46088 27.82055,73.64263 m 72.82438,-72.27888 -72.55163,73.64263 m -72.82437,-74.46088 72.55162,73.64263 M 392.57892,110.0042 374.59139,70.009918 M 334.49707,110.82246 352.4846,70.828176 m -32.17756,-1.550145 -29.81485,43.094579 144.72785,0 C 402.67769,68.187021 403.22319,68.732526 403.22319,68.732526 m -82.45302,0 81.44438,0"
        clip-path="url(#clipPath4350)"
@@ -1018,17 +1019,88 @@
        id="rect4609-82"
        width="100"
        height="100"
-       x="-181.82491"
-       y="214.44321" />
+       x="-476.78946"
+       y="110.3975" />
     <path
        id="path4005-8-8"
-       transform="matrix(0.6228699,0,0,0.6228699,-220.22798,69.018759)"
-       style="fill:none;stroke:#00f914;stroke-width:15.08612250999999900;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4270-4)"
+       transform="matrix(0.6228699,0,0,0.6228699,-72.74571,190.23706)"
+       style="fill:none;stroke:#00f914;stroke-width:15.08612251;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4270-4)"
        d="m 390.94941,113.19085 -27.82055,73.64263 m -28.6388,-74.46088 27.82055,73.64263 m 72.82438,-72.27888 -72.55163,73.64263 m -72.82437,-74.46088 72.55162,73.64263 M 392.57892,110.0042 374.59139,70.009918 M 334.49707,110.82246 352.4846,70.828176 m -32.17756,-1.550145 -29.81485,43.094579 144.72785,0 C 402.67769,68.187021 403.22319,68.732526 403.22319,68.732526 m -82.45302,0 81.44438,0"
        clip-path="url(#clipPath4350-1)"
        inkscape:connector-curvature="0"
        inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\diamond.png"
        inkscape:export-xdpi="54"
        inkscape:export-ydpi="54" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00f914;fill-opacity:1;stroke:#00f914;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3959"
+       sodipodi:cx="-366.42856"
+       sodipodi:cy="512.36218"
+       sodipodi:rx="9.2857141"
+       sodipodi:ry="10"
+       d="m -358.6404,506.91662 a 9.2857141,10 0 1 1 -0.12369,-0.19985"
+       sodipodi:start="5.7073254"
+       sodipodi:end="11.966493"
+       sodipodi:open="true"
+       transform="matrix(1.1428468,0,0,1.1428468,25.914548,-14.618522)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\lab.png"
+       inkscape:export-xdpi="51.887016"
+       inkscape:export-ydpi="51.887016" />
+    <path
+       id="path3128-1-7-48-8-2"
+       style="fill:none;stroke:#00f914;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="m -438.76949,592.47201 c 39.03761,7.7576 91.23915,4.40308 116.59542,-7.49255 25.35626,-11.89563 14.26533,-27.82772 -24.77227,-35.58532 -39.03761,-7.75761 -91.23917,-4.40308 -116.59542,7.49255 -24.92671,11.69409 -14.67857,27.33696 23.08801,35.24179 m 69.13554,24.71692 c 7.7576,-39.03761 4.40307,-91.23916 -7.49255,-116.59543 -11.89564,-25.35625 -27.82773,-14.26533 -35.58533,24.77227 -7.75761,39.03761 -4.40307,91.23917 7.49255,116.59543 11.6941,24.9267 27.33696,14.67857 35.24179,-23.08801 m -35.16393,1.15463 c 31.51709,-24.30614 63.32043,-65.83687 71.03475,-92.7615 7.7143,-26.92462 -11.58166,-29.04732 -43.09875,-4.74119 -31.5171,24.30614 -63.32043,65.83688 -71.03474,92.7615 -7.58363,26.46849 10.94019,29.03588 41.73229,5.78406 m 29.30349,-1.04287 c -31.51709,-24.30614 -63.32043,-65.83687 -71.03474,-92.7615 -7.7143,-26.92462 11.58166,-29.04732 43.09874,-4.7412 31.5171,24.30614 63.32043,65.83689 71.03475,92.76151 7.58363,26.46849 -10.94019,29.03588 -41.7323,5.78406"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\lab.png"
+       inkscape:export-xdpi="51.887016"
+       inkscape:export-ydpi="51.887016" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00f914;fill-opacity:1;stroke:#00f914;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3959-4"
+       sodipodi:cx="-366.42856"
+       sodipodi:cy="512.36218"
+       sodipodi:rx="9.2857141"
+       sodipodi:ry="10"
+       d="m -358.6404,506.91662 a 9.2857141,10 0 1 1 -0.12369,-0.19985"
+       sodipodi:start="5.7073254"
+       sodipodi:end="11.966493"
+       sodipodi:open="true"
+       transform="matrix(1.1428468,0,0,1.1428468,58.771706,-74.61797)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\lab.png"
+       inkscape:export-xdpi="51.887016"
+       inkscape:export-ydpi="51.887016" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00f914;fill-opacity:1;stroke:#00f914;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3959-5"
+       sodipodi:cx="-366.42856"
+       sodipodi:cy="512.36218"
+       sodipodi:rx="9.2857141"
+       sodipodi:ry="10"
+       d="m -358.6404,506.91662 a 9.2857141,10 0 1 1 -0.12369,-0.19985"
+       sodipodi:start="5.7073254"
+       sodipodi:end="11.966493"
+       sodipodi:open="true"
+       transform="matrix(1.1428468,0,0,1.1428468,-35.514001,-0.33225482)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\lab.png"
+       inkscape:export-xdpi="51.887016"
+       inkscape:export-ydpi="51.887016" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00f914;fill-opacity:1;stroke:#00f914;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3959-51"
+       sodipodi:cx="-366.42856"
+       sodipodi:cy="512.36218"
+       sodipodi:rx="9.2857141"
+       sodipodi:ry="10"
+       d="m -358.6404,506.91662 a 9.2857141,10 0 1 1 -0.12369,-0.19985"
+       sodipodi:start="5.7073254"
+       sodipodi:end="11.966493"
+       sodipodi:open="true"
+       transform="matrix(1.1428468,0,0,1.1428468,78.771706,22.524887)"
+       inkscape:export-filename="D:\Development\Projects\infected_ember\public\assets\images\lab.png"
+       inkscape:export-xdpi="51.887016"
+       inkscape:export-ydpi="51.887016" />
   </g>
 </svg>

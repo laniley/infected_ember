@@ -8,30 +8,19 @@
   </div>
 </div>
 
-
 <div class="top-nav-bar-section --center">
-  {{#link-to 'intern.monitor'}}
-    <div class="link">
-      <div class="icon">{{fa-icon 'heartbeat'}}</div>
-      <div class="title">Monitor</div>
-    </div>
-  {{/link-to}}
-</div>
-<div class="top-nav-bar-section --center">
-  {{#link-to 'intern.lab'}}
-    <div class="link">
-      <div class="icon">{{fa-icon 'medkit'}}</div>
-      <div class="title">Lab</div>
-    </div>
-  {{/link-to}}
-</div>
-<div class="top-nav-bar-section --center">
-  {{#link-to 'intern.leaderboard'}}
-    <div class="link">
-      <div class="icon">{{fa-icon 'trophy'}}</div>
-      <div class="title">Leaderboard</div>
-    </div>
-  {{/link-to}}
+  {{#each links as |link|}}
+    {{#link-to link.target_url class="link"}}
+      <div class="icon">
+        {{#if link.is_fa_icon}}
+          {{fa-icon link.icon}}
+        {{else}}
+          <span class="science-icon">{{link.icon}}</span>
+        {{/if}}
+      </div>
+      <div class="title">{{link.title}}</div>
+    {{/link-to}}
+  {{/each}}
 </div>
 
 <div class="top-nav-bar-section --right">
@@ -65,31 +54,26 @@
       <span class="nav-icon">{{fa-icon 'navicon'}}</span>
     {{/top-nav-bar/dropdown-title}}
     {{#top-nav-bar/dropdown-options}}
-      {{#top-nav-bar/dropdown-option}}
-        <a href="#">
-          <div class="option only-on-small">
-            {{fa-icon 'heartbeat'}} Monitor
-          </div>
-        </a>
-      {{/top-nav-bar/dropdown-option}}
-      {{#top-nav-bar/dropdown-option}}
-        <a href="#">
-          <div class="option only-on-small">
-            {{fa-icon 'medkit'}} Lab
-          </div>
-        </a>
-      {{/top-nav-bar/dropdown-option}}
-      {{#top-nav-bar/dropdown-option}}
-        <a href="#">
-          <div class="option only-on-small">
-            {{fa-icon 'trophy'}} Leaderboard
-          </div>
-        </a>
-      {{/top-nav-bar/dropdown-option}}
+      {{#each links as |link|}}
+        {{#top-nav-bar/dropdown-option}}
+          {{#link-to link.target_url}}
+            <div class="option only-on-small">
+              <span class="icon">
+                {{#if link.is_fa_icon}}
+                  {{fa-icon link.icon}}
+                {{else}}
+                  <span class="science-icon">{{link.icon}}</span>
+                {{/if}}
+              </span>
+              {{link.title}}
+            </div>
+          {{/link-to}}
+        {{/top-nav-bar/dropdown-option}}
+      {{/each}}
       {{#top-nav-bar/dropdown-option}}
         <a href="#" >
           <div class="option" {{action 'logout'}}>
-            {{fa-icon 'sign-out'}} Logout
+            <span class="icon">{{fa-icon 'sign-out'}}</span> Logout
           </div>
         </a>
       {{/top-nav-bar/dropdown-option}}

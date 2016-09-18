@@ -7,6 +7,10 @@
   line-height: 1.8rem;
 }
 
+.tooltip-label {
+	display: flex;
+}
+
 .tooltip span {
 	visibility: hidden;
 	position: absolute;
