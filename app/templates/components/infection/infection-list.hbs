@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row"> --}}
   <div class="column list">
     {{#each infections as |infection|}}
       {{#link-to 'intern.lab.infections.infection' infection.id}}
@@ -6,15 +6,9 @@
           {{infection.name}}
         </div>
       {{/link-to}}
-    {{else}}
-      {{#link-to 'intern.lab.infections.create'}}
-        <div class="list-item clickable">
-          create new
-        </div>
-      {{/link-to}}
     {{/each}}
-    {{#if (gt model.user.max_infections model.user.infections.length)}}
-      {{#link-to 'intern.infections.create'}}
+    {{#if (gt max_infections infections.length)}}
+      {{#link-to 'intern.lab.infections.create'}}
         <div class="list-item clickable">
           <img src="assets/images/plus.png" width="24px" /> new infection
         </div>
@@ -29,7 +23,7 @@
       </div>
     {{/if}}
   </div>
-  <div class="column content {{if content_is_closed "closed" "opened"}}">
+  {{!-- <div class="column content {{if content_is_closed "closed" "opened"}}">
     {{outlet}}
-  </div>
-</div>
+  </div> --}}
+{{!-- </div> --}}

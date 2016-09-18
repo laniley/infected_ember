@@ -101,6 +101,7 @@ ul {
 
 .section-title {
 	display: flex;
+	justify-content: center;
 	color: $highlight-text-color;
 	&:hover {
 		color: $link-color-hover;
@@ -108,14 +109,17 @@ ul {
 	margin-bottom: 50px;
 	border-radius: 5px;
 	padding: 10px 25px;
-	font-size: 48px;
+	a {
+		line-height: 48px;
+
+	}
 	i {
 		margin-right: 15px;
 	}
 }
 
-.large-text  {
-	font-size: 24px;
+.section-title, .large-text {
+	font-size: 36px;
 	@media (min-width: $md-min) {
 		font-size: 48px;
 	}

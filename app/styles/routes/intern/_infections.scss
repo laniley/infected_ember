@@ -1,7 +1,14 @@
 .infections {
-	.title {
-	    margin-top: 40px;
+	width: 90%;
+	max-width: 720px;
+	.content-title {
+		padding-top: 25px;
 		white-space: nowrap;
+	}
+	.content-container {
+		border-radius: 5px;
+		background: linear-gradient(to bottom, darken($background-color, 5%), $background-color);
+		padding: 15px;
 	}
 	.name {
 		margin: 20px 0 0 0;
@@ -171,5 +178,10 @@
 				}
 			}
 		}
+	}
+
+	.body {
+		left: 0;
+		right: 0;
 	}
 }

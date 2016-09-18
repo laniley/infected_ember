@@ -8,6 +8,8 @@
     {{#link-to 'intern.lab.infections' class="section-title align-center"}}
       * Infections
     {{/link-to}}
-    {{infection/infection-list infections=model.user.infections}}
+    {{infection/infection-list
+      infections=model.user.infections
+      max_infections=model.user.max_infections}}
   </div>
 </div>

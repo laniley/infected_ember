@@ -25,8 +25,8 @@ export default Ember.Controller.extend({
     else if(this.get('containsOnlyValidChars')) {
       return 'The name can only contain letters (A-Z), numbers (0-9), dashes (-), underscores (_), apostrophes (\'), whitespaces ( ), and periods (.)';
     }
-    else if(this.get('nameInput.length') > 50) {
-      return 'The name cannot be longer than 50 characters.';
+    else if(this.get('nameInput.length') > 25) {
+      return 'The name cannot be longer than 25 characters.';
     }
     else if(this.get('newInfectionNameStatus') === 'already_in_use') {
       return 'This name is already in use.';

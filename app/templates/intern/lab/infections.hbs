@@ -1,8 +1,8 @@
-<div class="row infections">
-  <div class="column">
+<div class="column infections">
     {{#link-to 'intern.lab' class="section-title align-center"}}
-      * Infections
+      {{fa-icon 'caret-left'}} * Infections
     {{/link-to}}
-    {{infection/infection-list infections=model.user.infections content_is_closed=content_is_closed}}
-  </div>
+    <div class="body">
+      {{outlet}}
+    </div>
 </div>
