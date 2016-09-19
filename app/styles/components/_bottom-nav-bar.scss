@@ -1,0 +1,15 @@
+$bottom-nav-bar-bg: linear-gradient(to top, $background-color, darken($background-color, 5%));
+
+.bottom-nav-bar {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	background: $bottom-nav-bar-bg;
+
+	.list-item {
+		display: inline-block;
+		line-height: 45px;
+		margin: 0 20px;
+	}
+}

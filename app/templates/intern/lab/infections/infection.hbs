@@ -1,4 +1,6 @@
+{{model.name}}
 <div class="content-container">
+  <div class="close" {{action 'back'}}>{{fa-icon 'close'}}</div>
   <div class="infection">
     <div class="tabs">
       <div class="tab">
@@ -7,6 +9,11 @@
       <div class="tab">
         {{#link-to 'intern.lab.infections.infection' model.id (query-params section="skills")}}Skills{{/link-to}}
       </div>
+      {{!-- <div class="button-container">
+        <button class="small save {{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
+          SAVE
+        </button>
+      </div> --}}
     </div>
     <div class="content">
       {{#if (eq section "stats")}}
@@ -76,7 +83,7 @@
             {{infection/skill-type type=type infection=model}}
           {{/each}}
           <div class="row button-row">
-            <button class="{{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
+            <button class="small {{if save_button_is_active "active" "disabled"}}" {{action 'save'}}>
                 SAVE
             </button>
           </div>
